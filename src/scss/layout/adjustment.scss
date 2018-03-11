@@ -1,0 +1,35 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.section {
+  background-color: #f4f5f0;
+  position: relative;
+}
+
+.title {
+  font-family: 'Sansus', Arial, sans-serif;
+  font-size: 63px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 70px;
+  color: #373e42;
+}
+
+.subtitle {
+  font-family: 'Sansus', Arial, sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 40px;
+  color: #566358;
+}
