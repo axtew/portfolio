@@ -63,8 +63,14 @@ body {
 
 .skills__title {
     margin: 0 auto;
+    margin-bottom: 30px;
     text-align: center;
     width: 300px;
+    line-height: 1.2;
+}
+
+.skills__info {
+    margin-bottom: 50px;
 }
 
 .skills__block {
@@ -72,7 +78,7 @@ body {
 }
 
 .skills__rating {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-weight: 500;
 }
 

@@ -21,8 +21,17 @@ body {
   font-size: 63px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 70px;
   color: #373e42;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: #373e42;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
 }
 
 .subtitle {
@@ -30,6 +39,16 @@ body {
   font-size: 35px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #566358;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: #566358;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
 }

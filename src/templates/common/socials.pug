@@ -1,0 +1,5 @@
+ul.socials__list
+    each social in ['vk', 'github', 'in']
+        li.socials__item
+            a(class=`socials__link.socials__link--${social}` href="#")
+                img.socials__img(src=`./assets/img/icons/${social}.svg`)

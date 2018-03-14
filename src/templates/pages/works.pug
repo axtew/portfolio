@@ -1,0 +1,24 @@
+extends ../template
+
+block variables
+    - var title = 'Мои работы'
+
+block content
+    include ../common/header
+
+    section.works
+        .title.works__title Мои работы
+
+        .works__left
+            .works__slider-info.slider-info
+                .slider-info__title.subtitle Сайт школы олнлайн образования
+                .slider-info__technologies HTML , CSS, JavaScript
+                .slider-info__link Посмотреть сайт
+        
+        .works__right
+
+
+    include ../common/footer
+    
+
+    script(src="./assets/scripts/bandle.js")
