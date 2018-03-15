@@ -9,14 +9,56 @@ block content
     section.works
         .title.works__title Мои работы
 
-        .works__left
-            .works__slider-info.slider-info
-                .slider-info__title.subtitle Сайт школы олнлайн образования
-                .slider-info__technologies HTML , CSS, JavaScript
-                .slider-info__link Посмотреть сайт
-        
-        .works__right
+        .works__cont
+            .works__left
+                .works__slider-info.slider-info
+                    .slider-info__title.subtitle Сайт школы олнлайн образования
+                    .slider-info__technologies HTML , CSS, JavaScript
+                    a.slider-info__link(href="#") Посмотреть сайт
+            
+            .works__right
+                .works__slider.slider
+                    .slider__preview
+                        .slider__container
+                            img.slider__img(src="./assets/img/works/work-1.png", alt="work 1")
+                    .slider__controls
+                        .slider__controls-back
+                            .slider__container
+                                img.slider__img(src="./assets/img/works/work-4.png", alt="work 4")
+                        .slider__controls-next
+                            .slider__container
+                                img.slider__img(src="./assets/img/works/work-2.png", alt="work 2")
 
+    section.communication
+        .title.communication__title Что обо мне говорят
+
+        .communication__reviews.reviews
+            .reviews__cont
+                .photo.reviews__photo
+                    img.header__photo-img(src="./assets/img/dima.jpg", alt="user photo")
+                .reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviews__author
+                    .reviews__name Ковальчук Дмитрий
+                    .reviews__status основатель Loftschool
+            .reviews__cont
+                .photo.reviews__photo
+                    img.header__photo-img(src="./assets/img/vova.jpg", alt="user photo")
+                .reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .reviews__author
+                    .reviews__name Сабанцев Владимир
+                    .reviews__status Преподаватель
+
+        .communication__form.form
+            .form__block
+                .form__title.subtitle Связаться со мной
+                form.form__inner(method="post" action="")
+                    .form__cont
+                        input.form__input(type="text" name="name" id="name" placeholder="Имя")
+                        input.form__input(type="text" name="email" id="email" placeholder="Email")
+                        textarea.form__input.form__input--mes(name="mes" id="mes" placeholder="Ваше сообщение")
+                    .form__butons
+                        button.form__btn.form__btn--submit(type="submit") Отправить
+                        button.form__btn.form__btn--reset(type="reset") Очистить
 
     include ../common/footer
     

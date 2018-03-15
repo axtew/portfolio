@@ -19,6 +19,7 @@ body {
 .title {
   font-family: 'Sansus', Arial, sans-serif;
   font-size: 63px;
+  text-align: center;
   text-transform: uppercase;
   margin: 0;
   color: #373e42;
@@ -31,12 +32,14 @@ body {
     background: #373e42;
     margin: 0 auto;
     margin-top: 15px;
+    margin-bottom: 30px;
   }
 }
 
 .subtitle {
   font-family: 'Sansus', Arial, sans-serif;
   font-size: 35px;
+  text-align: center;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 30px;
@@ -50,5 +53,14 @@ body {
     background: #566358;
     margin: 0 auto;
     margin-top: 15px;
+  }
+}
+
+.photo {
+  overflow: hidden;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
   }
 }

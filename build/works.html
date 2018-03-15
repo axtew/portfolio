@@ -26,7 +26,7 @@
           </ul>
         </div>
         <div class="header__profile">
-          <div class="header__photo"><img class="header__photo-img" src="./assets/img/photo.jpg" alt="photo"></div>
+          <div class="photo header__photo"><img class="header__photo-img" src="./assets/img/photo.jpg" alt="photo"></div>
           <div class="header__profile-text">
             <div class="header__profile-name">Артур Овчаренко</div>
             <div class="header__profile-info">Личный сайт веб-разработчика!</div>
@@ -36,14 +36,66 @@
       </header>
       <section class="works">
         <div class="title works__title">Мои работы</div>
-        <div class="works__left">
-          <div class="works__slider-info slider-info">
-            <div class="slider-info__title subtitle">Сайт школы олнлайн образования</div>
-            <div class="slider-info__technologies">HTML , CSS, JavaScript</div>
-            <div class="slider-info__link">Посмотреть сайт</div>
+        <div class="works__cont">
+          <div class="works__left">
+            <div class="works__slider-info slider-info">
+              <div class="slider-info__title subtitle">Сайт школы олнлайн образования</div>
+              <div class="slider-info__technologies">HTML , CSS, JavaScript</div><a class="slider-info__link" href="#">Посмотреть сайт</a>
+            </div>
+          </div>
+          <div class="works__right">
+            <div class="works__slider slider">
+              <div class="slider__preview">
+                <div class="slider__container"><img class="slider__img" src="./assets/img/works/work-1.png" alt="work 1"></div>
+              </div>
+              <div class="slider__controls">
+                <div class="slider__controls-back">
+                  <div class="slider__container"><img class="slider__img" src="./assets/img/works/work-4.png" alt="work 4"></div>
+                </div>
+                <div class="slider__controls-next">
+                  <div class="slider__container"><img class="slider__img" src="./assets/img/works/work-2.png" alt="work 2"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="works__right"></div>
+      </section>
+      <section class="communication">
+        <div class="title communication__title">Что обо мне говорят</div>
+        <div class="communication__reviews reviews">
+          <div class="reviews__cont">
+            <div class="photo reviews__photo"><img class="header__photo-img" src="./assets/img/dima.jpg" alt="user photo"></div>
+            <div class="reviews__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+            <div class="reviews__author">
+              <div class="reviews__name">Ковальчук Дмитрий</div>
+              <div class="reviews__status">основатель Loftschool</div>
+            </div>
+          </div>
+          <div class="reviews__cont">
+            <div class="photo reviews__photo"><img class="header__photo-img" src="./assets/img/vova.jpg" alt="user photo"></div>
+            <div class="reviews__text">Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</div>
+            <div class="reviews__author">
+              <div class="reviews__name">Сабанцев Владимир</div>
+              <div class="reviews__status">Преподаватель</div>
+            </div>
+          </div>
+        </div>
+        <div class="communication__form form">
+          <div class="form__block">
+            <div class="form__title subtitle">Связаться со мной</div>
+            <form class="form__inner" method="post" action="">
+              <div class="form__cont">
+                <input class="form__input" type="text" name="name" id="name" placeholder="Имя">
+                <input class="form__input" type="text" name="email" id="email" placeholder="Email">
+                <textarea class="form__input form__input--mes" name="mes" id="mes" placeholder="Ваше сообщение"></textarea>
+              </div>
+              <div class="form__butons">
+                <button class="form__btn form__btn--submit" type="submit">Отправить</button>
+                <button class="form__btn form__btn--reset" type="reset">Очистить</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
       <footer class="footer">
         <div class="footer__top">
@@ -54,7 +106,7 @@
           </div>
           <div class="footer__mid">
             <div class="container">
-              <div class="footer__pages"><a class="footer__links" href="./works.html">Мои работы</a><a class="footer__links" href="./index.html">Обо мне</a><a class="footer__links" href="#">Блог</a><a class="footer__links" href="#">Авторизация</a></div>
+              <div class="footer__pages"><a class="footer__links" href="./works.html">Мои работы</a><a class="footer__links" href="./index.html">Обо мне</a><a class="footer__links" href="./blog.html">Блог</a><a class="footer__links" href="#">Авторизация</a></div>
               <div class="footer__socials">
                 <ul class="socials__list">
                   <li class="socials__item"><a class="socials__link.socials__link--vk" href="#"><img class="socials__img" src="./assets/img/icons/vk.svg"></a></li>
