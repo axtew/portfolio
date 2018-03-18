@@ -1,76 +1,22 @@
-body {
-    width: 1200px;
-}
-.about-me {
-    display: flex;
-    justify-content: center;
-}
-
-.about-me__left,
-.about-me__right {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.about-me__left {
-    background-color: #ebefe2;
-}
-
-.about-me__left {
-    .container {
-        width: 75%;
-        text-align: center;
-    }
-}
-
-.about-me__right {
-    background-color: #f4f5f0;
-}
-
-.about-me__title {
-    margin-bottom: 50px;
-}
-
-.about-me__photo {
-    margin-bottom: 40px;
-
-    &-img {
-        width: 100%;
-    }
-}
-
-.desc__full {
-    text-align: left;
-    color: #566358;
-    margin-bottom: 20px;
-    
-    div {
-        margin-bottom: 10px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
-.about-me__right {
-    .container {
-        width: 92%;
-    }
-}
-
 .skills__title {
     margin: 0 auto;
     margin-bottom: 30px;
     text-align: center;
-    width: 300px;
+    width: 270px;
     line-height: 1.2;
 }
 
 .skills__info {
+    margin: 0 auto;
     margin-bottom: 50px;
+
+    @include tablets {
+        width: 475px;
+    }
+
+    @include phones {
+        width: 95%;
+    }
 }
 
 .skills__block {
@@ -80,12 +26,25 @@ body {
 .skills__rating {
     margin-bottom: 25px;
     font-weight: 500;
+
+    @include phones {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 .skills__group {
     color: #566358;
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.skills__list {
+    @include phones {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
 .skills__item {
@@ -95,6 +54,11 @@ body {
     position: relative;
     text-align: center;
     margin-right: 30px;
+
+    @include phones {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
 
     &:last-child {
         margin-right: 0;

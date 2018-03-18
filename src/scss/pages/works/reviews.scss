@@ -1,0 +1,64 @@
+.communication {
+    background-color: #f4f5f0;
+}
+
+.communication__title {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 70%;
+
+    @include tablets {
+        width: 97%;
+    }
+}
+
+.reviews__cont {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 30px;
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+.reviews__photo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.reviews__text,
+.reviews__author {
+    font-style: italic;
+}
+
+.reviews__text {
+    color: #5d5a55;
+    margin-bottom: 15px;
+}
+
+.reviews__name {
+    color: #4e8839;
+    font-weight: 700;
+}
+
+.reviews__status {
+    color: #373e42;
+
+    &::before {
+        display: inline-block;
+        content: "— \a0";
+    }
+}

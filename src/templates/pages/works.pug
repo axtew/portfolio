@@ -9,25 +9,23 @@ block content
     section.works
         .title.works__title Мои работы
 
-        .works__cont
-            .works__left
-                .works__slider-info.slider-info
+        .slider.works__slider
+            .works__slider-info.slider-info
+                .container
                     .slider-info__title.subtitle Сайт школы олнлайн образования
                     .slider-info__technologies HTML , CSS, JavaScript
                     a.slider-info__link(href="#") Посмотреть сайт
             
-            .works__right
-                .works__slider.slider
-                    .slider__preview
-                        .slider__container
-                            img.slider__img(src="./assets/img/works/work-1.png", alt="work 1")
-                    .slider__controls
-                        .slider__controls-back
-                            .slider__container
-                                img.slider__img(src="./assets/img/works/work-4.png", alt="work 4")
-                        .slider__controls-next
-                            .slider__container
-                                img.slider__img(src="./assets/img/works/work-2.png", alt="work 2")
+            .slider__preview
+                .slider__container
+                    img.slider__img(src="./assets/img/works/work-1.png", alt="work 1")
+            .slider__controls
+                .slider__controls-back
+                    .slider__container
+                        img.slider__img(src="./assets/img/works/work-4.png", alt="work 4")
+                .slider__controls-next
+                    .slider__container
+                        img.slider__img(src="./assets/img/works/work-2.png", alt="work 2")
 
     section.communication
         .title.communication__title Что обо мне говорят

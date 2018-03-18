@@ -1,0 +1,69 @@
+.about-me {
+    display: flex;
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.about-me__left,
+.about-me__right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.about-me__left {
+    background-color: #ebefe2;
+
+    .container {
+        width: 75%;
+        text-align: center;
+    }
+}
+
+.about-me__right {
+    background-color: #f4f5f0;
+}
+
+.about-me__title {
+    margin-bottom: 50px;
+}
+
+.about-me__photo {
+    margin-bottom: 40px;
+
+    &-img {
+        width: 100%;
+    }
+}
+
+.desc__full {
+    text-align: left;
+    color: #566358;
+    margin-bottom: 20px;
+    
+    div {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.about-me__right {
+    .container {
+        width: 92%;
+        
+        @include tablets {
+            text-align: center;
+        }
+    }
+}

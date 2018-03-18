@@ -1,31 +1,119 @@
 .blog {
     display: flex;
+    justify-content: center;
+    position: relative;
 
+    .container {
+        display: flex;
+        margin-top: 30px;
+        width: 91%;
+    }
+}
+
+.blog__profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.blog__photo {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 15px;
+}
+
+.blog__title {
+    color: #fff;
+
+    &::after {
+        background-color: #fff;
+    }
 }
 
 .blog-nav {
     min-width: 310px;
     width: 310px;
     text-align: right;
-    padding-right: 20px;
     margin-right: 100px;
+    color: #566358;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .blog-nav__item {
+    padding: 10px 0;
     position: relative;
-    padding-right: 25px;
 
     &--active {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        color: #4e8839;
+        font-weight: 700;
 
         &::after {
             content: '';
             display: block;
             width: 3px;
-            height: 25px;
-            background-color: green;
+            height: 100%;
+            margin-left: 25px;
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #6c9c5a;
+        }
+    }
+    span {
+        cursor: pointer;
+    }
+}
+
+.article {
+    margin-bottom: 25px;
+
+    h3 {
+        font-family: 'Sansus';
+        font-size: 35px;
+        line-height: 41px;
+        color: #566358;
+        margin-bottom: 20px;
+    }
+
+    span {
+        display: block;
+        color: #4e8839;
+        margin-bottom: 20px;
+    }
+
+    .article__text {
+        margin-bottom: 15px;
+        color: #566358;
+
+        p {
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 100%;
+        background-color: #373e42;
+        opacity: .12;
+    }
+
+    &:last-child {
+        margin-bottom: 250px;
+
+        &:after {
+            display: none;
         }
     }
 }
