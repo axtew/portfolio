@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Обо мне</title>
@@ -13,9 +13,18 @@
       <header class="header">
         <div class="header__socials socials">
           <ul class="socials__list">
-            <li class="socials__item"><a class="socials__link.socials__link--vk" href="#"><img class="socials__img" src="./assets/img/icons/vk.svg"></a></li>
-            <li class="socials__item"><a class="socials__link.socials__link--github" href="#"><img class="socials__img" src="./assets/img/icons/github.svg"></a></li>
-            <li class="socials__item"><a class="socials__link.socials__link--in" href="#"><img class="socials__img" src="./assets/img/icons/in.svg"></a></li>
+            <li class="socials__item"><a class="socials__link.socials__link--vk" href="#">
+                <svg class="socials__img" width="30" height="25">
+                  <use xlink:href="./assets/img/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link.socials__link--github" href="#">
+                <svg class="socials__img" width="30" height="25">
+                  <use xlink:href="./assets/img/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link.socials__link--in" href="#">
+                <svg class="socials__img" width="30" height="25">
+                  <use xlink:href="./assets/img/sprite.svg#in"></use>
+                </svg></a></li>
           </ul>
         </div>
         <div class="header__burger-menu burger-menu">
@@ -32,83 +41,119 @@
             <div class="profile__info header__profile-info">Личный сайт веб-разработчика</div>
           </div>
         </div>
-        <div class="header__arrow"><img class="header__arrow-img" src="./assets/img/icons/arrow_down.svg" alt="down"></div>
+        <figure class="header__arrow">
+          <svg class="header__arrow-img" width="25" height="20">
+            <use xlink:href="./assets/img/sprite.svg#arrow_down"></use>
+          </svg>
+        </figure>
+        <div class="header-bg">
+          <svg class="title-bg__img" width="400" height="120">
+            <use xlink:href="./assets/img/sprite.svg#portfolio_header"></use>
+          </svg>
+        </div>
       </header>
       <section class="section about-me">
+        <div class="triactangle about__triactangle">
+          <svg class="triactangle__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 140" preserveaspectratio="none">
+            <polygon class="triactangle-left about__triactangle-left" points="0,0   0,151   500.8,151   500.8,100"></polygon>
+            <polygon class="triactangle-right about__triactangle-right" points="1000,0   1000,151   500,151   500,100"></polygon>
+          </svg>
+        </div>
         <div class="about-me__left">
           <div class="container">
-            <div class="title about-me__title">Обо мне</div>
+            <div class="title about-me__title">
+              <div class="title__text">Обо мне</div>
+              <div class="title-bg about-me__title-bg">
+                <svg class="title-bg__img" width="300" height="100">
+                  <use xlink:href="./assets/img/sprite.svg#about_header"></use>
+                </svg>
+              </div>
+            </div>
             <div class="about-me__photo"><img class="about-me__photo-img" src="./assets/img/photo.jpg" alt="photo"></div>
             <div class="about-me__desc desc">
               <div class="subtitle desc__title">Кто я</div>
               <div class="desc__full">
-                <div>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</div>
-                <div>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</div>
+                <div>
+                  Я веб разработчик из Новосибирска. Мне 27 лет.
+                  Я занимаюсь разработкой современных сайтов и приложений.
+                  Мне нравится делать интересные и современные проекты.
+                </div>
+                <div>
+                  Этот сайт я сделал в рамках обучения в Школе онлайн
+                  образования LoftSchool. Чуть позже я освежу в нём свой контент.
+                  А пока посмотрите, как тут всё классно и красиво!
+                  
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="about-me__right">
           <div class="container">
+            <div class="subtitle about-me__right-title">Чем я могу быть вам полезен</div>
+            <div class="about-me__info">
+              <div>
+                Больше всего меня привлекет Frontend разработка,
+                но я также знаком и могу решать несложные задачи на Backend.
+                Но давайте по порядку.
+                
+              </div>
+            </div>
             <div class="about-me__skills skills">
-              <div class="subtitle skills__title">Чем я могу быть вам полезен</div>
-              <div class="skills__info">Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать несложные задачи на Backend. Но давайте по порядку.</div>
-              <div class="skills__block">
-                <div class="skills__rating">
-                  <div class="skills__group">Frontend</div>
-                  <ul class="skills__list">
-                    <li class="skills__item">
-                      <figure class="scills__circle"></figure>
-                      <div class="skills__item-title">HTML5</div>
-                    </li>
-                    <li class="skills__item">
-                      <figure class="scills__circle"></figure>
-                      <div class="skills__item-title">CSS3</div>
-                    </li>
-                    <li class="skills__item">
-                      <figure class="scills__circle"></figure>
-                      <div class="skills__item-title">JavaScript &amp; jQuery</div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="skills__rating">
-                  <div class="skills__group">Backend</div>
-                  <ul class="skills__list">
-                    <li class="skills__item">
-                      <figure class="scills__circle"></figure>
-                      <div class="skills__item-title">PHP</div>
-                    </li>
-                    <li class="skills__item">
-                      <figure class="scills__circle"></figure>
-                      <div class="skills__item-title">mySQL</div>
-                    </li>
-                    <li class="skills__item">
-                      <figure class="scills__circle"></figure>
-                      <div class="skills__item-title">Node.js &amp; npm</div>
-                    </li>
-                    <li class="skills__item">
-                      <figure class="scills__circle"></figure>
-                      <div class="skills__item-title">Mongo.db</div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="skills__rating">
-                  <div class="skills__group">WorkFlow</div>
-                  <ul class="skills__list">
-                    <li class="skills__item">
-                      <figure class="scills__circle"></figure>
-                      <div class="skills__item-title">Git</div>
-                    </li>
-                    <li class="skills__item">
-                      <figure class="scills__circle"></figure>
-                      <div class="skills__item-title">Gulp</div>
-                    </li>
-                    <li class="skills__item">
-                      <figure class="scills__circle"></figure>
-                      <div class="skills__item-title">Bower</div>
-                    </li>
-                  </ul>
-                </div>
+              <div class="skills__rating">
+                <div class="skills__group">Frontend</div>
+                <ul class="skills__list">
+                  <li class="skills__item">
+                    <figure class="skills__circle"></figure>
+                    <div class="skills__item-title">HTML5</div>
+                  </li>
+                  <li class="skills__item">
+                    <figure class="skills__circle"></figure>
+                    <div class="skills__item-title">CSS3</div>
+                  </li>
+                  <li class="skills__item">
+                    <figure class="skills__circle"></figure>
+                    <div class="skills__item-title">JavaScript &amp; jQuery</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="skills__rating">
+                <div class="skills__group">Backend</div>
+                <ul class="skills__list">
+                  <li class="skills__item">
+                    <figure class="skills__circle"></figure>
+                    <div class="skills__item-title">PHP</div>
+                  </li>
+                  <li class="skills__item">
+                    <figure class="skills__circle"></figure>
+                    <div class="skills__item-title">mySQL</div>
+                  </li>
+                  <li class="skills__item">
+                    <figure class="skills__circle"></figure>
+                    <div class="skills__item-title">Node.js &amp; npm</div>
+                  </li>
+                  <li class="skills__item">
+                    <figure class="skills__circle"></figure>
+                    <div class="skills__item-title">Mongo.db</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="skills__rating">
+                <div class="skills__group">WorkFlow</div>
+                <ul class="skills__list">
+                  <li class="skills__item">
+                    <figure class="skills__circle"></figure>
+                    <div class="skills__item-title">Git</div>
+                  </li>
+                  <li class="skills__item">
+                    <figure class="skills__circle"></figure>
+                    <div class="skills__item-title">Gulp</div>
+                  </li>
+                  <li class="skills__item">
+                    <figure class="skills__circle"></figure>
+                    <div class="skills__item-title">Bower</div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -139,9 +184,18 @@
               <div class="footer__pages"><a class="footer__links" href="./works.html">Мои работы</a><a class="footer__links" href="./about-me.html">Обо мне</a><a class="footer__links" href="./blog.html">Блог</a><a class="footer__links" href="./index.html">Авторизация</a></div>
               <div class="footer__socials">
                 <ul class="socials__list">
-                  <li class="socials__item"><a class="socials__link.socials__link--vk" href="#"><img class="socials__img" src="./assets/img/icons/vk.svg"></a></li>
-                  <li class="socials__item"><a class="socials__link.socials__link--github" href="#"><img class="socials__img" src="./assets/img/icons/github.svg"></a></li>
-                  <li class="socials__item"><a class="socials__link.socials__link--in" href="#"><img class="socials__img" src="./assets/img/icons/in.svg"></a></li>
+                  <li class="socials__item"><a class="socials__link.socials__link--vk" href="#">
+                      <svg class="socials__img" width="30" height="25">
+                        <use xlink:href="./assets/img/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link.socials__link--github" href="#">
+                      <svg class="socials__img" width="30" height="25">
+                        <use xlink:href="./assets/img/sprite.svg#github"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link.socials__link--in" href="#">
+                      <svg class="socials__img" width="30" height="25">
+                        <use xlink:href="./assets/img/sprite.svg#in"></use>
+                      </svg></a></li>
                 </ul>
               </div>
             </div>
