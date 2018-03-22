@@ -53,12 +53,14 @@ body {
   @include tablets {
     font-size: 49px;
     line-height: 52px;
+    width: 400px;
   }
 
   @include phones {
     font-size: 35px;
     line-height: 42px;
     margin-bottom: 15px;
+    width: 300px;
   }
 }
 

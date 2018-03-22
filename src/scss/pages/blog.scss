@@ -114,6 +114,14 @@
     &:last-child {
         margin-bottom: 250px;
 
+        @include tablets {
+            margin-bottom: 290px;
+        }
+
+        @include phones {
+            margin-bottom: 375px;
+        }
+
         &:after {
             display: none;
         }

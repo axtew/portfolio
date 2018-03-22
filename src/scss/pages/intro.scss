@@ -26,11 +26,34 @@
     cursor: pointer;
     border-radius: 50px;
     transition: .4s;
+    position: relative;
+    overflow: hidden;
+
+    .btn__hover {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #4e8839;
+        width: 0;
+        height: 100%;
+        transition: .5s;
+        transform-origin: center;
+        z-index: 1;
+    }
 
     &:hover {
-        background-color: #4e8839;
         border-color: #729e19;
+
+        .btn__hover {
+            width: 105%;
+        }
     }
+}
+
+.btn__text {
+    position: relative;
+    z-index: 10;
 }
 
 .intro__card {

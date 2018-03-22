@@ -1,24 +1,3 @@
-.about-me__right-title {
-    margin: 0 auto;
-    margin-bottom: 30px;
-    text-align: center;
-    width: 270px;
-    line-height: 1.2;
-}
-
-.about-me__info {
-    margin: 0 auto;
-    margin-bottom: 50px;
-
-    @include tablets {
-        width: 475px;
-    }
-
-    @include phones {
-        width: 95%;
-    }
-}
-
 .about-me__skills {
     margin-top: 15px;
 }
