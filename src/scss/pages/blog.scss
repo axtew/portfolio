@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    background-color: #faf8f0;
 
     .container {
         display: flex;
@@ -93,6 +94,7 @@
 
         p {
             margin-bottom: 15px;
+            max-width: 880px;
 
             &:last-child {
                 margin-bottom: 0;

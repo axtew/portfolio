@@ -1,5 +1,6 @@
 .works {
     background-color: #f8f9f5;
+    position: relative;
 }
 
 .slider {
@@ -97,7 +98,7 @@
 
 .slider__controls {
     display: flex;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .slider__controls-back,
@@ -120,18 +121,6 @@
         position: absolute;
         opacity: .7;
     }
-
-    &:before {
-        content: '';
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 42px;
-        height: 30px;
-        background: url('../img/icons/portf_arrow_up.svg') center no-repeat;
-        z-index: 10;
-        position: absolute;
-    }
 }
 
 .slider__controls-next {
@@ -148,6 +137,17 @@
     &:before {
         transform: rotate(180deg);
     }
+}
+
+.slider__arrow {
+    width: 42px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    fill: #fff;
+    z-index: 10;
+    transform: translate(-50%, -50%);
 }
 
 .slider__container {

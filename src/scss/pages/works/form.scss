@@ -8,6 +8,7 @@
 .form__block {
     position: absolute;
     left: 50%;
+    top: 40px;
     transform: translateX(-50%);
     background-color: rgba(218, 219, 214, 0.6);
     border-radius: 5px;
@@ -66,6 +67,7 @@
     color: #fff;
     font-weight: 500;
     position: relative;
+    transition: .4s;
 
     &::after {
         content: '';
@@ -85,8 +87,16 @@
             display: none;
         }
     }
+
+    &:hover {
+        background-color: #4e8839;
+    }
 }
 
 .form__btn--reset {
     background-color: #4e8839;
+
+    &:hover {
+        background-color: #6c9c5a;
+    }
 }

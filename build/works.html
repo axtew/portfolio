@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Мои работы</title>
@@ -13,9 +13,18 @@
       <header class="header">
         <div class="header__socials socials">
           <ul class="socials__list">
-            <li class="socials__item"><a class="socials__link.socials__link--vk" href="#"><img class="socials__img" src="./assets/img/icons/vk.svg"></a></li>
-            <li class="socials__item"><a class="socials__link.socials__link--github" href="#"><img class="socials__img" src="./assets/img/icons/github.svg"></a></li>
-            <li class="socials__item"><a class="socials__link.socials__link--in" href="#"><img class="socials__img" src="./assets/img/icons/in.svg"></a></li>
+            <li class="socials__item"><a class="socials__link.socials__link--vk" href="#">
+                <svg class="socials__img" width="30" height="25">
+                  <use xlink:href="./assets/img/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link.socials__link--github" href="#">
+                <svg class="socials__img" width="30" height="25">
+                  <use xlink:href="./assets/img/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link.socials__link--in" href="#">
+                <svg class="socials__img" width="30" height="25">
+                  <use xlink:href="./assets/img/sprite.svg#in"></use>
+                </svg></a></li>
           </ul>
         </div>
         <div class="header__burger-menu burger-menu">
@@ -32,10 +41,32 @@
             <div class="profile__info header__profile-info">Личный сайт веб-разработчика</div>
           </div>
         </div>
-        <div class="header__arrow"><img class="header__arrow-img" src="./assets/img/icons/arrow_down.svg" alt="down"></div>
+        <figure class="header__arrow">
+          <svg class="header__arrow-img" width="25" height="20">
+            <use xlink:href="./assets/img/sprite.svg#arrow_down"></use>
+          </svg>
+        </figure>
+        <div class="header-bg">
+          <svg class="title-bg__img" width="400" height="120">
+            <use xlink:href="./assets/img/sprite.svg#portfolio_header"></use>
+          </svg>
+        </div>
       </header>
       <section class="works">
-        <div class="title works__title">Мои работы</div>
+        <div class="triactangle works__triactangle">
+          <svg class="triactangle__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 140" preserveaspectratio="none">
+            <polygon class="triactangle-left works__triactangle-left" points="0,0   0,151   500.8,151   500.8,100"></polygon>
+            <polygon class="triactangle-right works__triactangle-right" points="1000,0   1000,151   500,151   500,100"></polygon>
+          </svg>
+        </div>
+        <div class="title works__title">
+          <div class="title__text">Мои работы</div>
+          <div class="title-bg works__title-bg">
+            <svg class="title-bg__img" width="300" height="100">
+              <use xlink:href="./assets/img/sprite.svg#works_header"></use>
+            </svg>
+          </div>
+        </div>
         <div class="slider works__slider">
           <div class="works__slider-info slider-info">
             <div class="container">
@@ -48,20 +79,37 @@
           </div>
           <div class="slider__controls">
             <div class="slider__controls-back">
+              <svg class="slider__arrow" width="42" height="30">
+                <use xlink:href="./assets/img/sprite.svg#portf_arrow_down"></use>
+              </svg>
               <div class="slider__container"><img class="slider__img" src="./assets/img/works/work-4.png" alt="work 4"></div>
             </div>
             <div class="slider__controls-next">
+              <svg class="slider__arrow" width="42" height="30">
+                <use xlink:href="./assets/img/sprite.svg#portf_arrow_up"></use>
+              </svg>
               <div class="slider__container"><img class="slider__img" src="./assets/img/works/work-2.png" alt="work 2"></div>
             </div>
           </div>
         </div>
       </section>
       <section class="communication">
-        <div class="title communication__title">Что обо мне говорят</div>
+        <div class="title communication__title">
+          <div class="title__text">Что обо мне говорят</div>
+          <div class="title-bg works__title-bg">
+            <svg class="title-bg__img" width="300" height="100">
+              <use xlink:href="./assets/img/sprite.svg#about_header"></use>
+            </svg>
+          </div>
+        </div>
         <div class="communication__reviews reviews">
           <div class="reviews__cont">
             <div class="photo reviews__photo"><img class="header__photo-img" src="./assets/img/dima.jpg" alt="user photo"></div>
-            <div class="reviews__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+            <div class="reviews__text">
+              Этот парень проходил обучение веб-разработке не где-то,
+              а в LoftSchool! 2 месяца только самых тяжелых испытаний
+              и бессонных ночей!
+            </div>
             <div class="reviews__author">
               <div class="reviews__name">Ковальчук Дмитрий</div>
               <div class="reviews__status">основатель Loftschool</div>
@@ -69,7 +117,10 @@
           </div>
           <div class="reviews__cont">
             <div class="photo reviews__photo"><img class="header__photo-img" src="./assets/img/vova.jpg" alt="user photo"></div>
-            <div class="reviews__text">Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</div>
+            <div class="reviews__text">
+              Этот код выдержит любые испытания. Только пожалуйста,
+              не загружается сайт на слишком старых браузерах!
+            </div>
             <div class="reviews__author">
               <div class="reviews__name">Сабанцев Владимир</div>
               <div class="reviews__status">Преподаватель</div>
@@ -105,9 +156,18 @@
               <div class="footer__pages"><a class="footer__links" href="./works.html">Мои работы</a><a class="footer__links" href="./about-me.html">Обо мне</a><a class="footer__links" href="./blog.html">Блог</a><a class="footer__links" href="./index.html">Авторизация</a></div>
               <div class="footer__socials">
                 <ul class="socials__list">
-                  <li class="socials__item"><a class="socials__link.socials__link--vk" href="#"><img class="socials__img" src="./assets/img/icons/vk.svg"></a></li>
-                  <li class="socials__item"><a class="socials__link.socials__link--github" href="#"><img class="socials__img" src="./assets/img/icons/github.svg"></a></li>
-                  <li class="socials__item"><a class="socials__link.socials__link--in" href="#"><img class="socials__img" src="./assets/img/icons/in.svg"></a></li>
+                  <li class="socials__item"><a class="socials__link.socials__link--vk" href="#">
+                      <svg class="socials__img" width="30" height="25">
+                        <use xlink:href="./assets/img/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link.socials__link--github" href="#">
+                      <svg class="socials__img" width="30" height="25">
+                        <use xlink:href="./assets/img/sprite.svg#github"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link.socials__link--in" href="#">
+                      <svg class="socials__img" width="30" height="25">
+                        <use xlink:href="./assets/img/sprite.svg#in"></use>
+                      </svg></a></li>
                 </ul>
               </div>
             </div>

@@ -20,11 +20,17 @@
     }
 }
 
-.btn__text {
+.intro__btn {
     padding: 10px 28px;
     border: 1px solid #fff;
     cursor: pointer;
     border-radius: 50px;
+    transition: .4s;
+
+    &:hover {
+        background-color: #4e8839;
+        border-color: #729e19;
+    }
 }
 
 .intro__card {
@@ -59,11 +65,11 @@
     margin-bottom: 35px;
 }
 
-.btns__list {
+.nav-btns__list {
     display: flex;
 }
 
-.btns__item {
+.nav-btns__item {
     background-color: #fff;
     background-color: #6c9c5a;
     display: flex;
@@ -94,7 +100,7 @@
     }
 }
 
-.btns__link {
+.nav-btns__link {
     color: #fff;
     padding: 11px 30px;
 

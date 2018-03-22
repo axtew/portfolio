@@ -32,6 +32,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
 }
 
 .header__photo {
@@ -46,8 +47,39 @@
 
 .header__arrow {
     position: absolute;
-    bottom: 50px;
+    bottom: 70px;
     left: 50%;
     cursor: pointer;
     transform: translateX(-50%);
+    margin: 0;
+    z-index: 10;
+}
+
+.header__arrow-img {
+    width: 25px;
+    height: 20px;
+    fill-opacity: .7;
+    fill: #fff;
+    transition: .4s;
+
+    &:hover {
+        fill-opacity: 1;
+    }
+}
+
+.header-bg {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 350px;
+}
+
+.header-bg__img {
+    fill: #fff;
+    fill-opacity: .12;
+    width: 100%;
+    height: 100%;
 }

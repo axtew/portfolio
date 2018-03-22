@@ -27,11 +27,10 @@ block content
                         ['Блог', './blog.html']
                     ]
                 
-                .intro__btns.btns
-                    ul.btns__list
-                        each btns in links
-                            li.btns__item
-                                a.btns__link(href=`${btns[1]}`) #{btns[0]}
+                ul.nav-btns__list
+                    each btns in links
+                        li.nav-btns__item
+                            a.nav-btns__link(href=`${btns[1]}`) #{btns[0]}
                             
                         
         .intro__bottom

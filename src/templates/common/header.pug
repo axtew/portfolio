@@ -1,20 +1,25 @@
 header.header
-    div.header__socials.socials
+    .header__socials.socials
         include ./socials
 
-    div.header__burger-menu.burger-menu
+    .header__burger-menu.burger-menu
         ul.burger-menu__list
             li.burger-menu__item
             li.burger-menu__item
             li.burger-menu__item
 
-    div.profile.header__profile
-        div.photo.header__photo
+    .profile.header__profile
+        .photo.header__photo
             img.header__photo-img(src="./assets/img/photo.jpg", alt="photo")
 
-        div.profile__text.header__profile-text
-            div.profile__name.header__profile-name Артур Овчаренко
-            div.profile__info.header__profile-info Личный сайт веб-разработчика
+        .profile__text.header__profile-text
+            .profile__name.header__profile-name Артур Овчаренко
+            .profile__info.header__profile-info Личный сайт веб-разработчика
 
-    div.header__arrow
-        img.header__arrow-img(src="./assets/img/icons/arrow_down.svg", alt="down")
+    figure.header__arrow
+        svg.header__arrow-img(width="25" height="20")
+            use(xlink:href="./assets/img/sprite.svg#arrow_down")
+
+    .header-bg
+        svg.title-bg__img(width="400" height="120")
+            use(xlink:href="./assets/img/sprite.svg#portfolio_header")

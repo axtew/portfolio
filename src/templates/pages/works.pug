@@ -7,7 +7,17 @@ block content
     include ../common/header
 
     section.works
-        .title.works__title Мои работы
+
+        .triactangle.works__triactangle
+            svg.triactangle__svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 140" preserveaspectratio="none")
+                polygon.triactangle-left.works__triactangle-left(points="0,0   0,151   500.8,151   500.8,100")
+                polygon.triactangle-right.works__triactangle-right(points="1000,0   1000,151   500,151   500,100")
+
+        .title.works__title
+            .title__text Мои работы
+            .title-bg.works__title-bg
+                svg.title-bg__img(width="300" height="100")
+                    use(xlink:href="./assets/img/sprite.svg#works_header")
 
         .slider.works__slider
             .works__slider-info.slider-info
@@ -21,27 +31,43 @@ block content
                     img.slider__img(src="./assets/img/works/work-1.png", alt="work 1")
             .slider__controls
                 .slider__controls-back
+                    svg.slider__arrow(width="42" height="30")
+                        use(xlink:href="./assets/img/sprite.svg#portf_arrow_down")
+
                     .slider__container
                         img.slider__img(src="./assets/img/works/work-4.png", alt="work 4")
                 .slider__controls-next
+                    svg.slider__arrow(width="42" height="30")
+                        use(xlink:href="./assets/img/sprite.svg#portf_arrow_up")
+
                     .slider__container
                         img.slider__img(src="./assets/img/works/work-2.png", alt="work 2")
 
     section.communication
-        .title.communication__title Что обо мне говорят
+        .title.communication__title
+            .title__text Что обо мне говорят
+            
+            .title-bg.works__title-bg
+                svg.title-bg__img(width="300" height="100")
+                    use(xlink:href="./assets/img/sprite.svg#about_header")
 
         .communication__reviews.reviews
             .reviews__cont
                 .photo.reviews__photo
                     img.header__photo-img(src="./assets/img/dima.jpg", alt="user photo")
-                .reviews__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .reviews__text.
+                    Этот парень проходил обучение веб-разработке не где-то,
+                    а в LoftSchool! 2 месяца только самых тяжелых испытаний
+                    и бессонных ночей!
                 .reviews__author
                     .reviews__name Ковальчук Дмитрий
                     .reviews__status основатель Loftschool
             .reviews__cont
                 .photo.reviews__photo
                     img.header__photo-img(src="./assets/img/vova.jpg", alt="user photo")
-                .reviews__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .reviews__text.
+                    Этот код выдержит любые испытания. Только пожалуйста,
+                    не загружается сайт на слишком старых браузерах!
                 .reviews__author
                     .reviews__name Сабанцев Владимир
                     .reviews__status Преподаватель

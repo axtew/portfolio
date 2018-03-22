@@ -13,3 +13,14 @@
         margin-right: 0;
     }
 }
+
+.socials__img {
+    fill: #fff;
+    width: 30px;
+    height: 24px;
+    transition: .4s;
+
+    &:hover {
+        fill: #4e8839;
+    }
+}
