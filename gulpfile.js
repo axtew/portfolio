@@ -13,7 +13,11 @@ const gulp = require('gulp'),
       gulpWebpack = require('gulp-webpack'),
       webpack = require('webpack'),
       sassGlob = require('gulp-sass-glob'),
-      webpackConfig = require('./webpack.config.js');
+      webpackConfig = require('./webpack.config.js'),
+      cheerio = require('gulp-cheerio'),
+      replace = require('gulp-replace'),
+      svgSprite = require('gulp-svg-sprite'),
+      svgMin = require('gulp-svgmin');
 
 const paths = {
   root: './build',
@@ -30,6 +34,10 @@ const paths = {
     src: './src/img/**/*.*',
     dest: './build/assets/img/'
   },
+  svg: {
+    src: './src/img/icons/*.svg',
+    dest: './build/assets/img/'
+  },
   fonts: {
     src: './src/fonts/**/*.*',
     dest: './build/assets/fonts/'
@@ -40,6 +48,18 @@ const paths = {
   }
 }
 
+// конфиг для спрайта
+const config = {
+  mode: {
+    symbol: {
+      sprite: "../sprite.svg",
+      example: {
+        dest: '../demo/spriteSvgDemo.html' // демо html
+      }
+    }
+  }
+};
+
 // слежка
 function watch() {
   gulp.watch(paths.styles.src, styles);
@@ -47,6 +67,7 @@ function watch() {
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.fonts.src, fonts);
   gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.svg.src, sprite);
 }
 
 // сервер
@@ -61,6 +82,33 @@ function server() {
 function images() {
   return gulp.src(paths.images.src)
     .pipe(gulp.dest(paths.images.dest));
+}
+
+// svg спрайт
+function sprite() {
+  return gulp.src(paths.svg.src)
+    // минифицируем svg
+    .pipe(svgMin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    // удалить все атрибуты fill, style and stroke в фигурах
+    .pipe(cheerio({
+      run: function($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {
+        xmlMode: true
+      }
+    }))
+    // cheerio плагин заменит, если появилась, скобка '&gt;', на нормальную.
+    .pipe(replace('&gt;', '>'))
+    // build svg sprite
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest(paths.svg.dest));
 }
 
 // перенос шрифтов
@@ -116,9 +164,10 @@ exports.clean = clean;
 exports.images = images;
 exports.fonts = fonts;
 exports.scripts = scripts;
+exports.sprite = sprite;
 
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(styles, templates, scripts, images, fonts),
+  gulp.parallel(styles, templates, scripts, images, sprite, fonts),
   gulp.parallel(watch, server)
 ));

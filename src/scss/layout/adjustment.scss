@@ -1,7 +1,12 @@
 body {
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
+  line-height: 24px;
   font-weight: 400;
+  
+  @include tablets {
+    font-size: 14px;
+  }
 }
 
 .wrapper {
@@ -19,17 +24,158 @@ body {
 .title {
   font-family: 'Sansus', Arial, sans-serif;
   font-size: 63px;
+  line-height: 66px;
+  text-align: center;
   text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 70px;
   color: #373e42;
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  .title__text {
+    position: relative;
+    z-index: 10;
+  }
+
+  &::after {
+    position: relative;
+    content: '';
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: #373e42;
+    margin: 0 auto;
+    margin-top: 15px;
+    z-index: 10;
+  }
+
+  @include tablets {
+    font-size: 49px;
+    line-height: 52px;
+  }
+
+  @include phones {
+    font-size: 35px;
+    line-height: 42px;
+    margin-bottom: 15px;
+  }
+}
+
+.title-bg {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 200px;
+  z-index: 1;
+}
+
+.title-bg__img {
+  fill: #fff;
+  fill-opacity: .12;
+  width: 100%;
+  height: 100%;
+}
+
+.works__title-bg,
+.about-me__title-bg {
+  .title-bg__img {
+      fill: #93c42e;
+  }
 }
 
 .subtitle {
   font-family: 'Sansus', Arial, sans-serif;
   font-size: 35px;
+  line-height: 41px;
+  text-align: center;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #566358;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: #566358;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  @include tablets {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  @include phones {
+    font-size: 21px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+}
+
+.photo {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+
+  img {
+    width: 100%;
+  }
+}
+
+.profile {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile__text {
+  white-space: nowrap;
+}
+
+.profile__name {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 12px;
+
+  @include tablets {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  @include phones {
+    font-size: 21px;
+    line-height: 28px;
+  }
+}
+
+.triactangle {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 150px;
+}
+
+.triactangle__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.triactangle-left,
+.triactangle-right {
+  fill: #f8f9f5;
 }

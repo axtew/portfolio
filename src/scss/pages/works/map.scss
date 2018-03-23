@@ -1,0 +1,65 @@
+.map {
+    height: 950px;
+    background: url('../img/map.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.contacts {
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(244, 245, 240, 0.75);
+    padding: 15px 30px;
+    border-radius: 5px;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include phones {
+        width: 100%;
+        top: 0;
+        border-radius: 0;
+    }
+}
+
+.contacts__cont {
+    text-align: left;
+}
+
+.contacts__item {
+    display: flex;
+    margin-bottom: 20px;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+
+    &--skype {
+        &::before {
+            background: url('../img/icons/skype.svg') center no-repeat;
+        }
+    }
+
+    &--mail {
+        &::before {
+            background: url('../img/icons/envelope2.svg') center no-repeat;
+        }
+    }
+
+    &--tel {
+        &::before {
+            background: url('../img/icons/phone.svg') center no-repeat;
+        }
+    }
+
+    &--adress {
+        &::before {
+            background: url('../img/icons/map_marker.svg') center no-repeat;
+        }
+    }
+}
+  

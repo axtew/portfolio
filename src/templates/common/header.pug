@@ -1,0 +1,25 @@
+header.header
+    .header__socials.socials
+        include ./socials
+
+    .header__burger-menu.burger-menu
+        ul.burger-menu__list
+            li.burger-menu__item
+            li.burger-menu__item
+            li.burger-menu__item
+
+    .profile.header__profile
+        .photo.header__photo
+            img.header__photo-img(src="./assets/img/photo.jpg", alt="photo")
+
+        .profile__text.header__profile-text
+            .profile__name.header__profile-name Артур Овчаренко
+            .profile__info.header__profile-info Личный сайт веб-разработчика
+
+    figure.header__arrow
+        svg.header__arrow-img(width="25" height="20")
+            use(xlink:href="./assets/img/sprite.svg#arrow_down")
+
+    .header-bg
+        svg.title-bg__img(width="400" height="120")
+            use(xlink:href="./assets/img/sprite.svg#portfolio_header")
