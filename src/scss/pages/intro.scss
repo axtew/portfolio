@@ -1,0 +1,115 @@
+.intro {
+    height: 100vh;
+    background: url('../img/bg.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro__top {
+    margin-top: 20px;
+    margin-left: auto;
+    color: #fff;
+    margin-right: 20px;
+
+    @include phones {
+        margin: 0;
+        margin-top: 15px;
+    }
+}
+
+.intro__btn {
+    padding: 10px 28px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .4s;
+
+    &:hover {
+        background-color: #4e8839;
+        border-color: #729e19;
+    }
+}
+
+.intro__card {
+    background-color: #fff;
+    border-radius: 5px;
+    background-color: rgba(18, 38, 32, 0.6);
+    overflow: hidden;
+    text-align: center;
+}
+
+.intro__photo {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.intro__profile-text {
+    margin-bottom: 30px;
+}
+
+.intro__profile-name {
+    font-size: 28px;
+}
+
+.intro__profile-info {
+    opacity: .8;
+}
+
+.intro__socials {
+    opacity: .5;
+    margin-bottom: 35px;
+}
+
+.nav-btns__list {
+    display: flex;
+}
+
+.nav-btns__item {
+    background-color: #fff;
+    background-color: #6c9c5a;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: .4s;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 2px;
+        background-color: #fff;
+        opacity: .5;
+    }
+
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+
+    &:hover {
+        background-color: #4e8839;
+    }
+}
+
+.nav-btns__link {
+    color: #fff;
+    padding: 11px 30px;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.intro__bottom {
+    color: #fff;
+    margin-bottom: 35px;
+}

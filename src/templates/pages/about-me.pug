@@ -1,0 +1,84 @@
+extends ../template
+
+block variables
+    - var title = 'Обо мне'
+
+block content
+    include ../common/header
+
+    section.section.about-me
+
+        .triactangle.about__triactangle
+            svg.triactangle__svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 140" preserveaspectratio="none")
+                polygon.triactangle-left.about__triactangle-left(points="0,0   0,151   500.8,151   500.8,100")
+                polygon.triactangle-right.about__triactangle-right(points="1000,0   1000,151   500,151   500,100")
+
+        .about-me__left
+            .container
+                .title.about-me__title
+                    .title__text Обо мне
+
+                    .title-bg.about-me__title-bg
+                        svg.title-bg__img(width="300" height="100")
+                            use(xlink:href="./assets/img/sprite.svg#about_header")
+                .about-me__photo
+                    img.about-me__photo-img(src="./assets/img/photo.jpg", alt="photo")
+                
+                .about-me__desc.desc
+                    .subtitle.desc__title Кто я
+                    .desc__full
+                        div.
+                            Я веб разработчик из Новосибирска. Мне 27 лет.
+                            Я занимаюсь разработкой современных сайтов и приложений.
+                            Мне нравится делать интересные и современные проекты.
+                        div.
+                            Этот сайт я сделал в рамках обучения в Школе онлайн
+                            образования LoftSchool. Чуть позже я освежу в нём свой контент.
+                            А пока посмотрите, как тут всё классно и красиво!
+        
+        .about-me__right
+            .container
+                .subtitle.about-me__right-title Чем я могу быть вам полезен
+                .about-me__info
+                    div.
+                        Больше всего меня привлекет Frontend разработка,
+                        но я также знаком и могу решать несложные задачи на Backend.
+                        Но давайте по порядку.
+
+                .about-me__skills.skills
+                    each title in ['Frontend', 'Backend', 'WorkFlow']
+                        .skills__rating
+                            .skills__group #{title}
+                            ul.skills__list
+                                if title == 'Frontend'
+                                    each name in ['HTML5', 'CSS3', 'JavaScript & jQuery']
+                                        li.skills__item
+                                            figure.skills__circle
+                                            .skills__item-title #{name}
+
+                                if title == 'Backend'
+                                    each name in ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+                                        li.skills__item
+                                            figure.skills__circle
+                                            .skills__item-title #{name}
+
+                                if title == 'WorkFlow'
+                                    each name in ['Git', 'Gulp', 'Bower']
+                                        li.skills__item
+                                            figure.skills__circle
+                                            .skills__item-title #{name}
+
+    section.section.map
+        .contacts
+            .subtitle.contacts__title Контакты
+            .contacts__cont
+                ul.contacts__list
+                    li.contacts__item.contacts__item--skype skype
+                    li.contacts__item.contacts__item--mail mail@mail.ru
+                    li.contacts__item.contacts__item--tel +7 931 200 93 24
+                    li.contacts__item.contacts__item--adress Новосибирск, ул. Инская, д.14
+    
+    include ../common/footer
+    
+
+    script(src="./assets/scripts/bandle.js")

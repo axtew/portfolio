@@ -1,0 +1,26 @@
+.header__socials {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.socials__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+    
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.socials__img {
+    fill: #fff;
+    width: 30px;
+    height: 24px;
+    transition: .4s;
+
+    &:hover {
+        fill: #4e8839;
+    }
+}

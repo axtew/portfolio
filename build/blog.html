@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Блог</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,700i&amp;amp;subset=cyrillic" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="assets/css/main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__socials socials">
+          <ul class="socials__list">
+            <li class="socials__item"><a class="socials__link.socials__link--vk" href="#">
+                <svg class="socials__img" width="30" height="25">
+                  <use xlink:href="./assets/img/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link.socials__link--github" href="#">
+                <svg class="socials__img" width="30" height="25">
+                  <use xlink:href="./assets/img/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link.socials__link--in" href="#">
+                <svg class="socials__img" width="30" height="25">
+                  <use xlink:href="./assets/img/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="header__burger-menu burger-menu">
+          <ul class="burger-menu__list">
+            <li class="burger-menu__item"></li>
+            <li class="burger-menu__item"></li>
+            <li class="burger-menu__item"></li>
+          </ul>
+        </div>
+        <div class="profile blog__profile">
+          <div class="photo blog__photo"><img class="blog__photo-img" src="./assets/img/photo.jpg" alt="photo"></div>
+          <div class="blog__text">
+            <div class="title blog__title">Блог
+              <div class="title-bg blog__title-bg">
+                <svg class="title-bg__img" width="300" height="100">
+                  <use xlink:href="./assets/img/sprite.svg#blog_header"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="blog__subtitle">Статьи, которые я скопировал)</div>
+          </div>
+        </div>
+      </header>
+      <section class="blog">
+        <div class="triactangle works__triactangle">
+          <svg class="triactangle__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 140" preserveaspectratio="none">
+            <polygon class="triactangle-left works__triactangle-left" points="0,0   0,151   500.8,151   500.8,100"></polygon>
+            <polygon class="triactangle-right works__triactangle-right" points="1000,0   1000,151   500,151   500,100"></polygon>
+          </svg>
+        </div>
+        <div class="container">
+          <aside class="blog__nav blog-nav">
+            <ul class="blog-nav__list">
+              <li class="blog-nav__item blog-nav__item--active"><span>Самое важное в SASS</span></li>
+              <li class="blog-nav__item"><span>Самое важное в SASS</span></li>
+              <li class="blog-nav__item"><span>Приёмы в вёрстке, без которых не обходится ни один сайт</span></li>
+              <li class="blog-nav__item"><span>Самый необходимый набор Gulp плагинов</span></li>
+              <li class="blog-nav__item"><span>Почему я выбрал Pug</span></li>
+            </ul>
+          </aside>
+          <div class="blog__cont">
+            <article class="article blog__article">
+              <h3>Самое важное в SASS</h3><span>22 ноября 2016</span>
+              <div class="article__text">
+                <p>
+                  Таким образом начало повседневной работы по формированию
+                  позиции позволяет выполнять важные задания по разработке
+                  направлений прогрессивного развития. Разнообразный и богатый
+                  опыт новая модель организационной деятельности играет важную
+                  роль в формировании новых предложений. Товарищи! новая модель
+                  организационной деятельности играет важную роль в формировании
+                  систем массового участия.
+                  
+                </p>
+                <p>
+                  Не следует, однако забывать, что укрепление и развитие
+                  структуры обеспечивает широкому кругу (специалистов) участие
+                  в формировании систем массового участия. Идейные соображения
+                  высшего порядка, а также рамки и место обучения кадров
+                  обеспечивает широкому кругу (специалистов) участие в
+                  формировании позиций, занимаемых участниками в отношении
+                  поставленных задач. Товарищи! постоянный количественный рост
+                  и сфера нашей активности способствует подготовки и реализации
+                  модели развития. С другой стороны рамки и место обучения
+                  кадров влечет за собой процесс внедрения и модернизации
+                  системы обучения кадров, соответствует насущным потребностям.
+                  
+                </p>
+              </div>
+            </article>
+            <article class="article blog__article">
+              <h3>Приёмы в вёрстке, без которых не обходится ни один сайт</h3><span>22 ноября 2016</span>
+              <div class="article__text">
+                <p>
+                  Таким образом начало повседневной работы по формированию
+                  позиции позволяет выполнять важные задания по разработке
+                  направлений прогрессивного развития. Разнообразный и богатый
+                  опыт новая модель организационной деятельности играет важную
+                  роль в формировании новых предложений. Товарищи! новая модель
+                  организационной деятельности играет важную роль в формировании
+                  систем массового участия.
+                  
+                </p>
+                <p>
+                  Не следует, однако забывать, что укрепление и развитие
+                  структуры обеспечивает широкому кругу (специалистов) участие
+                  в формировании систем массового участия. Идейные соображения
+                  высшего порядка, а также рамки и место обучения кадров
+                  обеспечивает широкому кругу (специалистов) участие в
+                  формировании позиций, занимаемых участниками в отношении
+                  поставленных задач. Товарищи! постоянный количественный рост
+                  и сфера нашей активности способствует подготовки и реализации
+                  модели развития. С другой стороны рамки и место обучения
+                  кадров влечет за собой процесс внедрения и модернизации
+                  системы обучения кадров, соответствует насущным потребностям.
+                  
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__left">
+            <div class="container">
+              <div class="footer__info">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+            </div>
+          </div>
+          <div class="footer__mid">
+            <div class="container">
+              <div class="footer__pages"><a class="footer__links" href="./works.html">Мои работы</a><a class="footer__links" href="./about-me.html">Обо мне</a><a class="footer__links" href="./blog.html">Блог</a><a class="footer__links" href="./index.html">Авторизация</a></div>
+              <div class="footer__socials">
+                <ul class="socials__list">
+                  <li class="socials__item"><a class="socials__link.socials__link--vk" href="#">
+                      <svg class="socials__img" width="30" height="25">
+                        <use xlink:href="./assets/img/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link.socials__link--github" href="#">
+                      <svg class="socials__img" width="30" height="25">
+                        <use xlink:href="./assets/img/sprite.svg#github"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link.socials__link--in" href="#">
+                      <svg class="socials__img" width="30" height="25">
+                        <use xlink:href="./assets/img/sprite.svg#in"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="container">
+              <div class="footer__quote quote">
+                <div class="quote__text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.</div>
+                <div class="quote__author">— Martin Golding</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__author">© Артур Овчаренко</div>
+          <div class="footer__copyrights">создано с любовью в LoftSchool | 2018</div>
+        </div>
+      </footer>
+    </div>
+    <script src="./assets/scripts/bandle.js"></script>
+  </body>
+</html>
