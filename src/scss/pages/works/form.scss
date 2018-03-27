@@ -24,6 +24,39 @@
     }
 }
 
+.blur__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-width: 900px;
+}
+
+.blur__img {
+    display: block;
+    width: 100%;
+}
+
+.blur__wrap {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 380px;
+    height: 450px;
+    margin-left: -190px;
+    // margin-top: -225px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.blur__form {
+    width: 100%;
+    height: 100%;
+    filter: blur(20px);
+    background: url('../img/form-bg.jpg');
+    background-size: 900px;
+}
+
 .form__title {
     margin-top: 25px;
 }

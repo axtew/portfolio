@@ -29,10 +29,16 @@
 
 .about-me__left {
     background-color: #ebefe2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
     .container {
         width: 75%;
+        max-width: 440px;
         text-align: center;
+        margin-bottom: auto;
     }
 }
 

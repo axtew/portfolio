@@ -1,0 +1,10 @@
+.scills-circle {
+    fill: none;
+    stroke-width: 18;
+}
+
+.scills-circle__sector {
+    stroke-dasharray: 283;
+    transition: all 1s;
+    stroke-dashoffset: 283;
+}

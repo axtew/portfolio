@@ -6,53 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,700i&amp;amp;subset=cyrillic" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="assets/css/main.min.css">
   </head>
   <body>
     <div class="wrapper">
       <section class="intro">
         <div class="intro__top">
-          <div class="btn intro__btn">
+          <div class="btn intro__btn btn__click">
             <div class="btn__hover"></div>
             <div class="btn__text">Авторизоваться</div>
           </div>
         </div>
         <div class="intro__mid">
           <div class="intro__card">
-            <div class="profile intro__profle">
-              <div class="photo intro__photo"><img class="intro__photo-img" src="./assets/img/photo.jpg" alt="photo"></div>
-              <div class="profile__text intro__profile-text">
-                <div class="profile__name intro__profile-name">Артур Овчаренко</div>
-                <div class="profile__info intro__profile-info">Личный сайт веб-разработчика</div>
+            <div class="intro__card-front">
+              <div class="profile intro__profle">
+                <div class="photo intro__photo"><img class="intro__photo-img" src="./assets/img/photo.jpg" alt="photo"></div>
+                <div class="profile__text intro__profile-text">
+                  <div class="profile__name intro__profile-name">Артур Овчаренко</div>
+                  <div class="profile__info intro__profile-info">Личный сайт веб-разработчика</div>
+                </div>
+                <div class="intro__socials socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"><a class="socials__link.socials__link--vk" href="#">
+                        <svg class="socials__img" width="30" height="25">
+                          <use xlink:href="./assets/img/sprite.svg#vk"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link.socials__link--github" href="#">
+                        <svg class="socials__img" width="30" height="25">
+                          <use xlink:href="./assets/img/sprite.svg#github"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link.socials__link--in" href="#">
+                        <svg class="socials__img" width="30" height="25">
+                          <use xlink:href="./assets/img/sprite.svg#in"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
               </div>
-              <div class="intro__socials socials">
-                <ul class="socials__list">
-                  <li class="socials__item"><a class="socials__link.socials__link--vk" href="#">
-                      <svg class="socials__img" width="30" height="25">
-                        <use xlink:href="./assets/img/sprite.svg#vk"></use>
-                      </svg></a></li>
-                  <li class="socials__item"><a class="socials__link.socials__link--github" href="#">
-                      <svg class="socials__img" width="30" height="25">
-                        <use xlink:href="./assets/img/sprite.svg#github"></use>
-                      </svg></a></li>
-                  <li class="socials__item"><a class="socials__link.socials__link--in" href="#">
-                      <svg class="socials__img" width="30" height="25">
-                        <use xlink:href="./assets/img/sprite.svg#in"></use>
-                      </svg></a></li>
-                </ul>
-              </div>
+              <ul class="nav-btns__list">
+                <li class="nav-btns__item"><a class="nav-btns__link" href="./works.html">Мои работы</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link" href="./about-me.html">Обо мне</a></li>
+                <li class="nav-btns__item"><a class="nav-btns__link" href="./blog.html">Блог</a></li>
+              </ul>
             </div>
-            <ul class="nav-btns__list">
-              <li class="nav-btns__item"><a class="nav-btns__link" href="./works.html">Мои работы</a></li>
-              <li class="nav-btns__item"><a class="nav-btns__link" href="./about-me.html">Обо мне</a></li>
-              <li class="nav-btns__item"><a class="nav-btns__link" href="./blog.html">Блог</a></li>
-            </ul>
+            <div class="intro__card-back">
+              <div class="subtitle intro__title">Авторизируйтесь</div>
+              <form class="intro__form intro-form">
+                <div class="form__cont intro-form__cont">
+                  <div class="intro-form__field">
+                    <div class="intro-form__img">
+                      <svg class="intro-form__svg" width="20" height="20">
+                        <use xlink:href="./assets/img/sprite.svg#login"></use>
+                      </svg>
+                    </div>
+                    <input class="form__input intro-form__input" type="text" name="login" id="login" placeholder="Логин">
+                  </div>
+                  <div class="intro-form__field">
+                    <div class="intro-form__img">
+                      <svg class="intro-form__svg" width="20" height="20">
+                        <use xlink:href="./assets/img/sprite.svg#password"></use>
+                      </svg>
+                    </div>
+                    <input class="form__input intro-form__input" type="password" name="password" id="password" placeholder="Пароль">
+                  </div>
+                  <label class="intro-form__label checkbox" for="check">
+                    <input class="checkbox__input" type="checkbox" name="check" id="check" value="1"><span class="checkbox__styled">
+                      <svg class="checkbox__svg" width="0" height="0">
+                        <use xlink:href="./assets/img/sprite.svg#check"></use>
+                      </svg></span><span class="checkbox__text">Я человек</span>
+                  </label>
+                  <div class="intro-form__controls-title">Вы точно не робот?</div>
+                  <div class="intro-form__controls">
+                    <label class="intro-form__radio radio" for="human">
+                      <input class="radio__input" type="radio" name="human" id="human" value="да"><span class="radio__styled"></span><span class="radio__text">Да</span>
+                    </label>
+                    <label class="intro-form__radio radio" for="no-human">
+                      <input class="radio__input" type="radio" name="human" id="no-human" value="нет"><span class="radio__styled"></span><span class="radio__text">Не уверен</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form__butons">
+                  <div class="form__btn form__btn--back btn__click">На главную</div>
+                  <button class="form__btn form__btn--submit" type="submit">Войти</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
         <div class="intro__bottom">
-          <div class="intro__info">© Артур Овчаренко | создано с любовью в LoftSchool | 2018</div>
+          <div class="intro__author">© Артур Овчаренко</div>
+          <div class="intro__copyrights">создано с любовью в LoftSchool | 2018</div>
         </div>
       </section>
     </div>
+    <script src="./assets/scripts/bandle.js"></script>
   </body>
 </html>
