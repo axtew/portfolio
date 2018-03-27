@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,700i&amp;amp;subset=cyrillic" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="assets/css/main.min.css">
   </head>
   <body>
@@ -46,29 +47,24 @@
             <use xlink:href="./assets/img/sprite.svg#arrow_down"></use>
           </svg>
         </figure>
-        <div class="header-bg">
-          <svg class="title-bg__img" width="400" height="120">
+        <div class="header__bg-text">
+          <svg class="header__bg-text-img" width="400" height="120">
             <use xlink:href="./assets/img/sprite.svg#portfolio_header"></use>
           </svg>
         </div>
       </header>
       <section class="section about-me">
-        <div class="triactangle about__triactangle">
-          <svg class="triactangle__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 140" preserveaspectratio="none">
-            <polygon class="triactangle-left about__triactangle-left" points="0,0   0,151   500.8,151   500.8,100"></polygon>
-            <polygon class="triactangle-right about__triactangle-right" points="1000,0   1000,151   500,151   500,100"></polygon>
-          </svg>
-        </div>
         <div class="about-me__left">
-          <div class="container">
-            <div class="title about-me__title">
-              <div class="title__text">Обо мне</div>
+          <div class="title about-me__title">
+            <div class="title__text">Обо мне
               <div class="title-bg about-me__title-bg">
                 <svg class="title-bg__img" width="300" height="100">
                   <use xlink:href="./assets/img/sprite.svg#about_header"></use>
                 </svg>
               </div>
             </div>
+          </div>
+          <div class="container">
             <div class="about-me__photo"><img class="about-me__photo-img" src="./assets/img/photo.jpg" alt="photo"></div>
             <div class="about-me__desc desc">
               <div class="subtitle desc__title">Кто я</div>
@@ -104,15 +100,30 @@
                 <div class="skills__group">Frontend</div>
                 <ul class="skills__list">
                   <li class="skills__item">
-                    <figure class="skills__circle"></figure>
+                    <figure class="skills__circle">
+                      <svg class="scills-circle" width="110" height="110">
+                        <circle r="45" cx="55" cy="55" stroke="#ccc" fill="none"></circle>
+                        <circle class="scills-circle__sector" r="45" cx="55" cy="55" stroke="#74a163" transform="rotate(-90 55 55)"></circle>
+                      </svg>
+                    </figure>
                     <div class="skills__item-title">HTML5</div>
                   </li>
                   <li class="skills__item">
-                    <figure class="skills__circle"></figure>
+                    <figure class="skills__circle">
+                      <svg class="scills-circle" width="110" height="110">
+                        <circle r="45" cx="55" cy="55" stroke="#ccc" fill="none"></circle>
+                        <circle class="scills-circle__sector" r="45" cx="55" cy="55" stroke="#74a163" transform="rotate(-90 55 55)"></circle>
+                      </svg>
+                    </figure>
                     <div class="skills__item-title">CSS3</div>
                   </li>
                   <li class="skills__item">
-                    <figure class="skills__circle"></figure>
+                    <figure class="skills__circle">
+                      <svg class="scills-circle" width="110" height="110">
+                        <circle r="45" cx="55" cy="55" stroke="#ccc" fill="none"></circle>
+                        <circle class="scills-circle__sector" r="45" cx="55" cy="55" stroke="#74a163" transform="rotate(-90 55 55)"></circle>
+                      </svg>
+                    </figure>
                     <div class="skills__item-title">JavaScript &amp; jQuery</div>
                   </li>
                 </ul>
@@ -121,19 +132,39 @@
                 <div class="skills__group">Backend</div>
                 <ul class="skills__list">
                   <li class="skills__item">
-                    <figure class="skills__circle"></figure>
+                    <figure class="skills__circle">
+                      <svg class="scills-circle" width="110" height="110">
+                        <circle r="45" cx="55" cy="55" stroke="#ccc" fill="none"></circle>
+                        <circle class="scills-circle__sector" r="45" cx="55" cy="55" stroke="#74a163" transform="rotate(-90 55 55)"></circle>
+                      </svg>
+                    </figure>
                     <div class="skills__item-title">PHP</div>
                   </li>
                   <li class="skills__item">
-                    <figure class="skills__circle"></figure>
+                    <figure class="skills__circle">
+                      <svg class="scills-circle" width="110" height="110">
+                        <circle r="45" cx="55" cy="55" stroke="#ccc" fill="none"></circle>
+                        <circle class="scills-circle__sector" r="45" cx="55" cy="55" stroke="#74a163" transform="rotate(-90 55 55)"></circle>
+                      </svg>
+                    </figure>
                     <div class="skills__item-title">mySQL</div>
                   </li>
                   <li class="skills__item">
-                    <figure class="skills__circle"></figure>
+                    <figure class="skills__circle">
+                      <svg class="scills-circle" width="110" height="110">
+                        <circle r="45" cx="55" cy="55" stroke="#ccc" fill="none"></circle>
+                        <circle class="scills-circle__sector" r="45" cx="55" cy="55" stroke="#74a163" transform="rotate(-90 55 55)"></circle>
+                      </svg>
+                    </figure>
                     <div class="skills__item-title">Node.js &amp; npm</div>
                   </li>
                   <li class="skills__item">
-                    <figure class="skills__circle"></figure>
+                    <figure class="skills__circle">
+                      <svg class="scills-circle" width="110" height="110">
+                        <circle r="45" cx="55" cy="55" stroke="#ccc" fill="none"></circle>
+                        <circle class="scills-circle__sector" r="45" cx="55" cy="55" stroke="#74a163" transform="rotate(-90 55 55)"></circle>
+                      </svg>
+                    </figure>
                     <div class="skills__item-title">Mongo.db</div>
                   </li>
                 </ul>
@@ -142,15 +173,30 @@
                 <div class="skills__group">WorkFlow</div>
                 <ul class="skills__list">
                   <li class="skills__item">
-                    <figure class="skills__circle"></figure>
+                    <figure class="skills__circle">
+                      <svg class="scills-circle" width="110" height="110">
+                        <circle r="45" cx="55" cy="55" stroke="#ccc" fill="none"></circle>
+                        <circle class="scills-circle__sector" r="45" cx="55" cy="55" stroke="#74a163" transform="rotate(-90 55 55)"></circle>
+                      </svg>
+                    </figure>
                     <div class="skills__item-title">Git</div>
                   </li>
                   <li class="skills__item">
-                    <figure class="skills__circle"></figure>
+                    <figure class="skills__circle">
+                      <svg class="scills-circle" width="110" height="110">
+                        <circle r="45" cx="55" cy="55" stroke="#ccc" fill="none"></circle>
+                        <circle class="scills-circle__sector" r="45" cx="55" cy="55" stroke="#74a163" transform="rotate(-90 55 55)"></circle>
+                      </svg>
+                    </figure>
                     <div class="skills__item-title">Gulp</div>
                   </li>
                   <li class="skills__item">
-                    <figure class="skills__circle"></figure>
+                    <figure class="skills__circle">
+                      <svg class="scills-circle" width="110" height="110">
+                        <circle r="45" cx="55" cy="55" stroke="#ccc" fill="none"></circle>
+                        <circle class="scills-circle__sector" r="45" cx="55" cy="55" stroke="#74a163" transform="rotate(-90 55 55)"></circle>
+                      </svg>
+                    </figure>
                     <div class="skills__item-title">Bower</div>
                   </li>
                 </ul>
@@ -210,10 +256,11 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <div class="footer__copirights">© Овчаренко Артур | Создано с любовью в LoftSchool | 2018</div>
+          <div class="footer__author">© Артур Овчаренко</div>
+          <div class="footer__copyrights">создано с любовью в LoftSchool | 2018</div>
         </div>
       </footer>
-      <script src="./assets/scripts/bandle.js"></script>
     </div>
+    <script src="./assets/scripts/bandle.js"></script>
   </body>
 </html>
