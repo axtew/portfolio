@@ -9,23 +9,29 @@ const WebGLBlock = document.querySelector('.intro__background'),
 			blogCont = document.querySelector('.blog'),
 			menuBurger = document.querySelector('.header__burger-menu');
 
-var slider = require('./slider');
-if(menuBurger) {
-	var burger = require('./hamburger-menu');
-}
-if(blogCont) {
-	var blog = require('./blog');
-}
+var isMobile = false;
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+	isMobile = true;
+
+const slider = require('./slider');
 const parallax = require('./parallax');
-if(WebGLBlock) {
-	var webGL = require('./water');
-}
-if(blurWrap) {
+
+if(menuBurger)
+	var burger = require('./hamburger-menu');
+
+if(blogCont)
+	var blog = require('./blog');
+
+if(WebGLBlock)
+	if (!isMobile)
+		var webGL = require('./water');
+
+if(blurWrap)
 	var blur = require('./blur');
-}
-if(skills) {
+
+if(skills)
 	var scroll = require('./skills');
-}
 
 // переворачивавание карточки
 if(btnClick) {
@@ -48,47 +54,51 @@ if(header) {
 
 window.onscroll = function() {
 	var wScroll = window.pageYOffset;
-	if(blogCont) {
-		blog.scrollActive(wScroll);
-	}
 
-	if(header) {
-		parallax.init(wScroll);
-	}
+	if(blogCont)
+		blog.scrollActive(wScroll);
+
+	if(header)
+		if (!isMobile)
+			parallax.init(wScroll);
 	
-	if(skills) {
+	if(skills)
 		scroll.grow(wScroll, 25, 0);
-	}
 };
 
 window.onresize = function () {
-	if(blurWrap) {
-		blur.default.set();
-	}
+	if(blurWrap)
+		blur.set();
 };
 
-if(blurWrap) {
-	blur.default.set();
-}
+if(blurWrap)
+	blur.set();
 
-if(blogCont) {
+if(blogCont)
 	blog.init();
-}
 
-if(menuBurger) {
+if(menuBurger)
 	burger.init();
-}
 
 slider.init();
 
 $('.blog-nav').on('click', function(e) {
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+	if (isMobile)
 		$(this).toggleClass('blog-nav--active');
-	}
 });
 
 document.body.addEventListener('wheel', function(e) {
-	if(document.querySelector('.burger-menu--active')) {
+	if(document.querySelector('.burger-menu--active'))
 		e.preventDefault();
-	};
+});
+
+document.body.addEventListener('touchmove', function(e) {
+	if(document.querySelector('.burger-menu--active'))
+		e.preventDefault();
+});
+
+document.body.addEventListener('keydown', function(e) {
+	if(document.querySelector('.burger-menu--active'))
+		if(e.key == 'ArrowUp' || e.key == 'ArrowDown')
+			e.preventDefault();
 });

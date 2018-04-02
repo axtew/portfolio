@@ -22,22 +22,32 @@ header.header
             li.nav-menu__item.title
                 a.nav-menu__link(href="./index.html") Авторизация
 
-    //- .header__bg
-        img.header__bg-img(src="assets/img/bg.jpg")
+    .header__bg
+        img.header__bg-img(src="assets/img/bg1.jpg")
 
     .profile.header__profile
         .header__user
             .photo.header__photo
                 img.header__photo-img(src="./assets/img/photo.jpg", alt="photo")
 
-            .profile__text.header__profile-text
-                .profile__name.header__profile-name Артур Овчаренко
-                .profile__info.header__profile-info Личный сайт веб-разработчика
+            if title == 'Блог'
+                .blog__text
+                    .title.blog__title Блог
+                    .blog__subtitle Статьи, которые я скопировал)
+            else
+                .profile__text.header__profile-text
+                    .profile__name.header__profile-name Артур Овчаренко
+                    .profile__info.header__profile-info Личный сайт веб-разработчика
+
+    if title == 'Блог'
+        .header__bg-text
+            svg.header__bg-text-img(width="300" height="100")
+                use(xlink:href="./assets/img/sprite.svg#blog_header")
+    else
+        .header__bg-text
+            svg.header__bg-text-img(width="400" height="120")
+                use(xlink:href="./assets/img/sprite.svg#portfolio_header")
 
     figure.header__arrow
         svg.header__arrow-img(width="25" height="20")
             use(xlink:href="./assets/img/sprite.svg#arrow_down")
-
-    .header__bg-text
-        svg.header__bg-text-img(width="400" height="120")
-            use(xlink:href="./assets/img/sprite.svg#portfolio_header")

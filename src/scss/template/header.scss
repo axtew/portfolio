@@ -2,9 +2,12 @@
     height: 100vh;
     // min-height: 650px;
     position: relative;
-    background-image: url('../img/bg.jpg');
-    background-position: center;
-    background-size: cover;
+
+    @include tablets {
+        background-image: url('../img/bg.jpg');
+        background-position: center;
+        background-size: cover;
+    }
 }
 
 .header__bg {
@@ -13,11 +16,23 @@
     right: 0;
     left: 0;
     height: 1270px;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .header__bg-img {
     display: block;
-    max-width: 180%;
+    max-width: 150%;
+
+    @media screen and (min-width: 1500px) {
+        max-width: 180%;
+    }
+
+    @media screen and (max-width: 1024px) {
+        max-width: inherit;
+    }
 }
 
 .header__profile {

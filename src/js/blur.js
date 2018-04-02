@@ -1,6 +1,6 @@
 // console.log('in blur.js!');
 
-var blur = ( function () {
+module.exports = ( function () {
     var wrapper = document.querySelector('.blur__wrap'),
         form = document.querySelector('.blur__form');
 
@@ -16,5 +16,3 @@ var blur = ( function () {
         }
     }
 }());
-
-export default blur;

@@ -16,7 +16,7 @@ module.exports = ( function () {
             style.webkitTransform = transformString;
         },
         init: function (wScroll) {
-            // this.move(bg, wScroll, 35);
+            this.move(bg, wScroll, 35);
             this.move(sectionText, wScroll, 12);
             this.move(user, wScroll, 3);
         }
