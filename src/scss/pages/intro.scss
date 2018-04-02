@@ -26,19 +26,67 @@
     cursor: pointer;
     border-radius: 50px;
     transition: .4s;
+    position: relative;
+    overflow: hidden;
+    
+    &--active {
+        opacity: 0;
+        cursor: default;
+        z-index: -1;
+    }
+
+    .btn__hover {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #4e8839;
+        width: 0;
+        height: 100%;
+        transition: .5s;
+        transform-origin: center;
+        z-index: 1;
+    }
 
     &:hover {
-        background-color: #4e8839;
         border-color: #729e19;
+
+        .btn__hover {
+            width: 105%;
+        }
     }
 }
 
+.btn__text {
+    position: relative;
+    z-index: 10;
+}
+
 .intro__card {
-    background-color: #fff;
     border-radius: 5px;
-    background-color: rgba(18, 38, 32, 0.6);
     overflow: hidden;
     text-align: center;
+}
+
+.intro__card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.intro__profile,
+.nav-btns__list {
+    * {
+        @include tablets {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @include phones {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
 }
 
 .intro__photo {
@@ -54,6 +102,10 @@
 
 .intro__profile-name {
     font-size: 28px;
+
+    @include phones {
+        font-size: 21px;
+    }
 }
 
 .intro__profile-info {
@@ -62,7 +114,7 @@
 
 .intro__socials {
     opacity: .5;
-    margin-bottom: 35px;
+    // margin-bottom: 35px;
 }
 
 .nav-btns__list {
@@ -103,6 +155,7 @@
 .nav-btns__link {
     color: #fff;
     padding: 11px 30px;
+    white-space: nowrap;
 
     &:hover {
         text-decoration: none;
@@ -112,4 +165,9 @@
 .intro__bottom {
     color: #fff;
     margin-bottom: 35px;
+
+    @include tablets {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }

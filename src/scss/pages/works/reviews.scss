@@ -11,7 +11,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 70%;
+    width: 80%;
 
     @include tablets {
         width: 97%;
@@ -25,6 +25,7 @@
     align-items: center;
     padding: 0 10px;
     margin-bottom: 30px;
+    max-width: 400px;
 
     @include phones {
         width: 100%;

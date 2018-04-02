@@ -5,33 +5,79 @@ block variables
 
 block content
     section.intro
+
+        //- .Background
+        //- .test(v-html="href")
+
         .intro__top
-            .btn.intro__btn
+            .btn.intro__btn.btn__click
+                .btn__hover
                 .btn__text Авторизоваться
         .intro__mid
             .intro__card
 
-                .profile.intro__profle
-                    .photo.intro__photo
-                        img.intro__photo-img(src="./assets/img/photo.jpg", alt="photo")
-                    .profile__text.intro__profile-text
-                        .profile__name.intro__profile-name Артур Овчаренко
-                        .profile__info.intro__profile-info Личный сайт веб-разработчика
-                    .intro__socials.socials
-                        include ../common/socials
+                .intro__card-front
+                    .profile.intro__profle
+                        .photo.intro__photo
+                            img.intro__photo-img(src="./assets/img/photo.jpg", alt="photo")
+                        .profile__text.intro__profile-text
+                            .profile__name.intro__profile-name Артур Овчаренко
+                            .profile__info.intro__profile-info Личный сайт веб-разработчика
+                        .intro__socials.socials
+                            include ../common/socials
 
-                - 
-                    var links = [
-                        ['Мои работы', './works.html'],
-                        ['Обо мне', './about-me.html'],
-                        ['Блог', './blog.html']
-                    ]
+                    - 
+                        var links = [
+                            ['Мои работы', './works.html'],
+                            ['Обо мне', './about-me.html'],
+                            ['Блог', './blog.html']
+                        ]
                 
-                ul.nav-btns__list
-                    each btns in links
-                        li.nav-btns__item
-                            a.nav-btns__link(href=`${btns[1]}`) #{btns[0]}
+                    ul.nav-btns__list
+                        each btns in links
+                            li.nav-btns__item
+                                a.nav-btns__link(href=`${btns[1]}`) #{btns[0]}
+
+                .intro__card-back
+                    .subtitle.intro__title Авторизируйтесь
+                    form.intro__form.intro-form
+                        .form__cont.intro-form__cont
+                            .intro-form__field
+                                .intro-form__img
+                                    svg.intro-form__svg(width="20" height="20")
+                                        use(xlink:href="./assets/img/sprite.svg#login")
+                                input.form__input.intro-form__input(type="text" name="login" id="login" placeholder="Логин")
+                            .intro-form__field
+                                .intro-form__img
+                                    svg.intro-form__svg(width="20" height="20")
+                                        use(xlink:href="./assets/img/sprite.svg#password")
+                                input.form__input.intro-form__input(type="password" name="password" id="password" placeholder="Пароль")
+
+                            label.intro-form__label.checkbox(for="check")
+                                input.checkbox__input(type="checkbox" name="check" id="check" value="1")
+                                span.checkbox__styled
+                                    svg.checkbox__svg(width="0" height="0")
+                                        use(xlink:href="./assets/img/sprite.svg#check")
+                                span.checkbox__text Я человек
+
+                            .intro-form__controls-title Вы точно не робот?
                             
+                            .intro-form__controls
+
+                                label.intro-form__radio.radio(for="human")
+                                    input.radio__input(type="radio" name="human" id="human" value="да")
+                                    span.radio__styled
+                                    span.radio__text Да
+
+                                label.intro-form__radio.radio(for="no-human")
+                                    input.radio__input(type="radio" name="human" id="no-human" value="нет")
+                                    span.radio__styled
+                                    span.radio__text Не уверен
+                            
+                        .form__butons
+                            div.form__btn.form__btn--back.btn__click На главную
+                            button.form__btn.form__btn--submit(type="submit") Войти
                         
         .intro__bottom
-            .intro__info © Артур Овчаренко | создано с любовью в LoftSchool | 2018
+            .intro__author © Артур Овчаренко
+            .intro__copyrights создано с любовью в LoftSchool | 2018

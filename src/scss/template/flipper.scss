@@ -1,0 +1,48 @@
+.intro__mid {
+	perspective: 1000px;
+}
+
+.intro__card {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 369px;
+    height: 397px;
+    
+    @include phones {
+        width: 345px;
+    }
+}
+
+.intro__card-back,
+.intro__card-front {
+    backface-visibility: hidden;
+    overflow: hidden;
+    background-color: rgba(18, 38, 32, 0.6);
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.intro__card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+
+    &--active {
+        transform: rotateY(180deg);
+    }
+}
+
+.intro__card-back {
+    transform: rotateY(-180deg);
+    display: flex;
+    flex-direction: column;
+
+    &--active {
+        transform: rotateY(0deg);
+    }
+}

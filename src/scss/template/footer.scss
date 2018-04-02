@@ -134,8 +134,31 @@
     font-weight: 700;
 }
 
+.footer__bottom,
+.intro__bottom {
+    display: flex;
+    justify-content: center;
+
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .footer__bottom {
     background-color: #80a971;
     text-align: center;
-    padding: 8px 0;
+}
+
+.intro__author,
+.footer__author {
+    &:after {
+        content: '\a0|\a0';
+    }
+
+    @include phones {
+        &:after {
+            display: none;
+        }
+    }
 }

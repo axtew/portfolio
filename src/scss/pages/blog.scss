@@ -114,6 +114,18 @@
     &:last-child {
         margin-bottom: 250px;
 
+        @include tablets {
+            margin-bottom: 290px;
+        }
+
+        @media screen and (max-width: 640px) {
+            margin-bottom: 320px;
+        }
+
+        @include phones {
+            margin-bottom: 375px;
+        }
+
         &:after {
             display: none;
         }

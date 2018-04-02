@@ -29,10 +29,16 @@
 
 .about-me__left {
     background-color: #ebefe2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
     .container {
         width: 75%;
+        max-width: 440px;
         text-align: center;
+        margin-bottom: auto;
     }
 }
 
@@ -73,5 +79,30 @@
         @include tablets {
             text-align: center;
         }
+    }
+}
+
+.about-me__right-title {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 270px;
+    line-height: 1.2;
+
+    @include tablets {
+        margin: 30px auto;
+    }
+}
+
+.about-me__info {
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    @include tablets {
+        width: 475px;
+    }
+
+    @include phones {
+        width: 95%;
     }
 }

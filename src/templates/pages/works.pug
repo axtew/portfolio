@@ -73,6 +73,12 @@ block content
                     .reviews__status Преподаватель
 
         .communication__form.form
+            .blur__bg
+                img.blur__img(src="./assets/img/form-bg.jpg")
+
+            .blur__wrap
+                .blur__form
+
             .form__block
                 .form__title.subtitle Связаться со мной
                 form.form__inner(method="post" action="")
@@ -85,6 +91,3 @@ block content
                         button.form__btn.form__btn--reset(type="reset") Очистить
 
     include ../common/footer
-    
-
-    script(src="./assets/scripts/bandle.js")
