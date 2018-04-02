@@ -164,10 +164,20 @@
     }
 }
 
+.radio__text {
+    transition: .3s;
+}
+
 .radio__input {
+
+    &:checked ~ .radio__text {
+        color: #6c9c5a;
+    }
+
     &:checked + .radio__styled {
         &:after {
             background-color: #6c9c5a;
         }
     }
 }
+

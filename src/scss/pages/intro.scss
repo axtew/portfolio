@@ -1,7 +1,7 @@
 .intro {
     height: 100vh;
-    background: url('../img/bg.jpg') center no-repeat;
-    background-size: cover;
+    // background: url('../img/bg.jpg') center no-repeat;
+    // background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -163,6 +163,7 @@
 }
 
 .intro__bottom {
+    z-index: 10;
     color: #fff;
     margin-bottom: 35px;
 

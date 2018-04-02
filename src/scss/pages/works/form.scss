@@ -14,12 +14,12 @@
     left: 50%;
     top: 40px;
     transform: translateX(-50%);
-    background-color: rgba(218, 219, 214, 0.6);
+    // background-color: rgba(218, 219, 214, 0.6);
     border-radius: 5px;
     width: 380px;
     overflow: hidden;
 
-    @include phones {
+    @media screen and (max-width: 400px) {
         width: 100%;
     }
 }
@@ -44,9 +44,16 @@
     width: 380px;
     height: 450px;
     margin-left: -190px;
-    // margin-top: -225px;
     border-radius: 10px;
     overflow: hidden;
+
+    @include tablets {
+        height: 443px;
+    }
+
+    @include phones {
+        height: 415px;
+    }
 }
 
 .blur__form {

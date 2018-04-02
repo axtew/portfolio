@@ -1,93 +1,71 @@
 extends ../template
 
 block variables
-    - var title = 'Мои работы'
+	- var title = 'Мои работы'
 
 block content
-    include ../common/header
+	include ../common/header
 
-    section.works
+	section.works
 
-        .triactangle.works__triactangle
-            svg.triactangle__svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 140" preserveaspectratio="none")
-                polygon.triactangle-left.works__triactangle-left(points="0,0   0,151   500.8,151   500.8,100")
-                polygon.triactangle-right.works__triactangle-right(points="1000,0   1000,151   500,151   500,100")
+		.triactangle.works__triactangle
+			svg.triactangle__svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 140" preserveaspectratio="none")
+				polygon.triactangle-left.works__triactangle-left(points="0,0   0,151   500.8,151   500.8,100")
+				polygon.triactangle-right.works__triactangle-right(points="1000,0   1000,151   500,151   500,100")
 
-        .title.works__title
-            .title__text Мои работы
-            .title-bg.works__title-bg
-                svg.title-bg__img(width="300" height="100")
-                    use(xlink:href="./assets/img/sprite.svg#works_header")
+		.title.works__title
+			.title__text Мои работы
+			.title-bg.works__title-bg
+				svg.title-bg__img(width="300" height="100")
+					use(xlink:href="./assets/img/sprite.svg#works_header")
 
-        .slider.works__slider
-            .works__slider-info.slider-info
-                .container
-                    .slider-info__title.subtitle Сайт школы олнлайн образования
-                    .slider-info__technologies HTML , CSS, JavaScript
-                    a.slider-info__link(href="#") Посмотреть сайт
-            
-            .slider__preview
-                .slider__container
-                    img.slider__img(src="./assets/img/works/work-1.png", alt="work 1")
-            .slider__controls
-                .slider__controls-back
-                    svg.slider__arrow(width="42" height="30")
-                        use(xlink:href="./assets/img/sprite.svg#portf_arrow_down")
+		include ../common/slider
 
-                    .slider__container
-                        img.slider__img(src="./assets/img/works/work-4.png", alt="work 4")
-                .slider__controls-next
-                    svg.slider__arrow(width="42" height="30")
-                        use(xlink:href="./assets/img/sprite.svg#portf_arrow_up")
+	section.communication
+		.title.communication__title
+			.title__text Что обо мне говорят
+			
+			.title-bg.works__title-bg
+				svg.title-bg__img(width="300" height="100")
+					use(xlink:href="./assets/img/sprite.svg#about_header")
 
-                    .slider__container
-                        img.slider__img(src="./assets/img/works/work-2.png", alt="work 2")
+		.communication__reviews.reviews
+			.reviews__cont
+				.photo.reviews__photo
+					img.header__photo-img(src="./assets/img/dima.jpg", alt="user photo")
+				.reviews__text.
+					Этот парень проходил обучение веб-разработке не где-то,
+					а в LoftSchool! 2 месяца только самых тяжелых испытаний
+					и бессонных ночей!
+				.reviews__author
+					.reviews__name Ковальчук Дмитрий
+					.reviews__status основатель Loftschool
+			.reviews__cont
+				.photo.reviews__photo
+					img.header__photo-img(src="./assets/img/vova.jpg", alt="user photo")
+				.reviews__text.
+					Этот код выдержит любые испытания. Только пожалуйста,
+					не загружается сайт на слишком старых браузерах!
+				.reviews__author
+					.reviews__name Сабанцев Владимир
+					.reviews__status Преподаватель
 
-    section.communication
-        .title.communication__title
-            .title__text Что обо мне говорят
-            
-            .title-bg.works__title-bg
-                svg.title-bg__img(width="300" height="100")
-                    use(xlink:href="./assets/img/sprite.svg#about_header")
+		.communication__form.form
+			.blur__bg
+				img.blur__img(src="./assets/img/form-bg.jpg")
 
-        .communication__reviews.reviews
-            .reviews__cont
-                .photo.reviews__photo
-                    img.header__photo-img(src="./assets/img/dima.jpg", alt="user photo")
-                .reviews__text.
-                    Этот парень проходил обучение веб-разработке не где-то,
-                    а в LoftSchool! 2 месяца только самых тяжелых испытаний
-                    и бессонных ночей!
-                .reviews__author
-                    .reviews__name Ковальчук Дмитрий
-                    .reviews__status основатель Loftschool
-            .reviews__cont
-                .photo.reviews__photo
-                    img.header__photo-img(src="./assets/img/vova.jpg", alt="user photo")
-                .reviews__text.
-                    Этот код выдержит любые испытания. Только пожалуйста,
-                    не загружается сайт на слишком старых браузерах!
-                .reviews__author
-                    .reviews__name Сабанцев Владимир
-                    .reviews__status Преподаватель
+			.blur__wrap
+				.blur__form
 
-        .communication__form.form
-            .blur__bg
-                img.blur__img(src="./assets/img/form-bg.jpg")
+			.form__block
+				.form__title.subtitle Связаться со мной
+				form.form__inner(method="post" action="")
+					.form__cont
+						input.form__input(type="text" name="name" id="name" placeholder="Имя")
+						input.form__input(type="text" name="email" id="email" placeholder="Email")
+						textarea.form__input.form__input--mes(name="mes" id="mes" placeholder="Ваше сообщение")
+					.form__butons
+						button.form__btn.form__btn--submit(type="submit") Отправить
+						button.form__btn.form__btn--reset(type="reset") Очистить
 
-            .blur__wrap
-                .blur__form
-
-            .form__block
-                .form__title.subtitle Связаться со мной
-                form.form__inner(method="post" action="")
-                    .form__cont
-                        input.form__input(type="text" name="name" id="name" placeholder="Имя")
-                        input.form__input(type="text" name="email" id="email" placeholder="Email")
-                        textarea.form__input.form__input--mes(name="mes" id="mes" placeholder="Ваше сообщение")
-                    .form__butons
-                        button.form__btn.form__btn--submit(type="submit") Отправить
-                        button.form__btn.form__btn--reset(type="reset") Очистить
-
-    include ../common/footer
+	include ../common/footer

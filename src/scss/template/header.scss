@@ -20,25 +20,6 @@
     max-width: 180%;
 }
 
-.burger-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
-
-.burger-menu__item {
-    width: 40px;
-    height: 5px;
-    background-color: #fff;
-    border-radius: 5px;
-    margin-bottom: 10px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
 .header__profile {
     position: absolute;
     top: 50%;
@@ -52,7 +33,7 @@
 .header__photo {
     width: 140px;
     height: 140px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .profile__text {
@@ -82,19 +63,18 @@
 }
 
 .header__bg-text {
-    // display: inline-block;
     position: absolute;
     top: 50%;
-    // left: 50%;
     left: 0;
     right: 0;
     transform: translateY(-50%);
     text-align: center;
     margin: 0 50px;
     max-width: 1200px;
-    // transform: translate(-50%, -50%);
-    // width: 90%;
-    // height: 350px;
+
+    @media screen and (min-width: 1280px) {
+        margin: 0 auto;
+    }
 }
 
 .header__bg-text-img {

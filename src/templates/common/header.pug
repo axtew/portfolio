@@ -8,16 +8,31 @@ header.header
             li.burger-menu__item
             li.burger-menu__item
 
+    nav.nav-menu
+        .nav-menu__bg
+            .nav-menu__left-bg
+            .nav-menu__right-bg
+        ul.nav-menu__list
+            li.nav-menu__item.title
+                a.nav-menu__link(href="./works.html") Мои работы
+            li.nav-menu__item.title
+                a.nav-menu__link(href="./about-me.html") Обо мне
+            li.nav-menu__item.title
+                a.nav-menu__link(href="./blog.html") Блог
+            li.nav-menu__item.title
+                a.nav-menu__link(href="./index.html") Авторизация
+
     //- .header__bg
         img.header__bg-img(src="assets/img/bg.jpg")
 
     .profile.header__profile
-        .photo.header__photo
-            img.header__photo-img(src="./assets/img/photo.jpg", alt="photo")
+        .header__user
+            .photo.header__photo
+                img.header__photo-img(src="./assets/img/photo.jpg", alt="photo")
 
-        .profile__text.header__profile-text
-            .profile__name.header__profile-name Артур Овчаренко
-            .profile__info.header__profile-info Личный сайт веб-разработчика
+            .profile__text.header__profile-text
+                .profile__name.header__profile-name Артур Овчаренко
+                .profile__info.header__profile-info Личный сайт веб-разработчика
 
     figure.header__arrow
         svg.header__arrow-img(width="25" height="20")

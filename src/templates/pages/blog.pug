@@ -17,17 +17,21 @@ block content
                 li.burger-menu__item
 
         .profile.blog__profile
-            .photo.blog__photo
-                img.blog__photo-img(src="./assets/img/photo.jpg", alt="photo")
+            .header__user
+                .photo.blog__photo
+                    img.blog__photo-img(src="./assets/img/photo.jpg", alt="photo")
 
-            .blog__text
+                .blog__text
+                    .title.blog__title Блог
+                    .blog__subtitle Статьи, которые я скопировал)
 
-                .title.blog__title Блог
-                    .title-bg.blog__title-bg
-                        svg.title-bg__img(width="300" height="100")
-                            use(xlink:href="./assets/img/sprite.svg#blog_header")
-                
-                .blog__subtitle Статьи, которые я скопировал)
+        .header__bg-text
+            svg.header__bg-text-img(width="300" height="100")
+                use(xlink:href="./assets/img/sprite.svg#blog_header")
+
+        figure.header__arrow
+            svg.header__arrow-img(width="25" height="20")
+                use(xlink:href="./assets/img/sprite.svg#arrow_down")
 
     section.blog
 
@@ -36,7 +40,7 @@ block content
                 polygon.triactangle-left.works__triactangle-left(points="0,0   0,151   500.8,151   500.8,100")
                 polygon.triactangle-right.works__triactangle-right(points="1000,0   1000,151   500,151   500,100")
         
-        .container
+        .container.blog__container
             aside.blog__nav.blog-nav
                 ul.blog-nav__list
                     -
@@ -44,11 +48,10 @@ block content
                             'Самое важное в SASS',
                             'Приёмы в вёрстке, без которых не обходится ни один сайт',
                             'Самый необходимый набор Gulp плагинов',
-                            'Почему я выбрал Pug'
+                            'Почему я выбрал Pug',
+                            'Статья блога'
                         ]
 
-                    li.blog-nav__item.blog-nav__item--active
-                        span Самое важное в SASS
                     each item in title
                         li.blog-nav__item
                             span #{item}
@@ -106,5 +109,43 @@ block content
                             кадров влечет за собой процесс внедрения и модернизации
                             системы обучения кадров, соответствует насущным потребностям.
     
+                article.article.blog__article
+                    h3 Самый необходимый набор Gulp плагинов
+                    span 23 ноября 2016
+                    .article__text
+                        p.
+                            Таким образом начало повседневной работы по формированию
+                            позиции позволяет выполнять важные задания по разработке
+                            направлений прогрессивного развития. Разнообразный и богатый
+                            опыт новая модель организационной деятельности играет важную
+                            роль в формировании новых предложений. Товарищи! новая модель
+                            организационной деятельности играет важную роль в формировании
+                            систем массового участия.
+
+                article.article.blog__article
+                    h3 Почему я выбрал Pug
+                    span 24 ноября 2016
+                    .article__text
+                        p.
+                            Таким образом начало повседневной работы по формированию
+                            позиции позволяет выполнять важные задания по разработке
+                            направлений прогрессивного развития. Разнообразный и богатый
+                            опыт новая модель организационной деятельности играет важную
+                            роль в формировании новых предложений. Товарищи! новая модель
+                            организационной деятельности играет важную роль в формировании
+                            систем массового участия.
+
+                article.article.blog__article
+                    h3 Статья блога
+                    span 25 ноября 2016
+                    .article__text
+                        p.
+                            Таким образом начало повседневной работы по формированию
+                            позиции позволяет выполнять важные задания по разработке
+                            направлений прогрессивного развития. Разнообразный и богатый
+                            опыт новая модель организационной деятельности играет важную
+                            роль в формировании новых предложений. Товарищи! новая модель
+                            организационной деятельности играет важную роль в формировании
+                            систем массового участия.
     include ../common/footer
         
