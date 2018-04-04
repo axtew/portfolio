@@ -181,3 +181,16 @@
     }
 }
 
+.empty ~ .radio__text {
+    color: red;
+}
+
+.empty ~ .checkbox__text {
+    color: red;
+}
+
+// &:checked + .radio__styled {
+//     &:after {
+//         background-color: #6c9c5a;
+//     }
+// }

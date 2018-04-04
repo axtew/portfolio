@@ -18,6 +18,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 const preloader = require('./preloader');
 const slider = require('./slider');
 const parallax = require('./parallax');
+const check = require('./check');
 
 if(menuBurger)
 	var burger = require('./hamburger-menu');
@@ -107,33 +108,8 @@ document.body.addEventListener('keydown', function(e) {
 			e.preventDefault();
 });
 
-var mail = document.getElementById('mail'),
-	inputs = document.querySelectorAll('.form__input');
+if(document.getElementById('mail'))
+	check('mail');
 
-mail.addEventListener('submit', function(e) {
-	e.preventDefault();
-
-	var submit = true;
-	for(var i = 0; i < inputs.length; i++) {
-		input = inputs[i];
-		if(input.value == '') {
-			submit =
-			input.classList.add('empty');
-		}
-	}
-
-	if(submit == true) {
-		console.log('submit!');
-
-		for(var i = 0; i < inputs.length; i++) {
-			input = inputs[i];
-			input.value = '';
-		}
-	}
-});
-
-mail.addEventListener('click', function(e) {
-	if(e.target.classList.contains('empty')) {
-		e.target.classList.remove('empty');
-	}
-});
+if(document.getElementById('identification'))
+	check('identification');
