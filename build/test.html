@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Тест</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,700i&amp;amp;subset=cyrillic" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="assets/css/main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="test">
+        <button id="btn" type="submit">Кнопка</button>
+        <div id="counter">0</div>
+        <div class="svg-block">
+          <div id="counter">0</div>
+          <svg class="preload-svg" id="svg" width="80" height="95">
+            <g>
+              <path class="path" id="path1" fill="none" stroke="#231F20" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"></path>
+            </g>
+            <g>
+              <path class="path" id="path2" fill="none" stroke="#231F20" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"></path>
+            </g>
+            <g>
+              <path class="path" id="path3" fill="none" stroke="#231F20" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"></path>
+            </g>
+          </svg>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    var svg = document.getElementById('svg');
+    var path1 = document.getElementById('path1');
+    var path2 = document.getElementById('path2');
+    var path3 = document.getElementById('path3');
+    var btn = document.getElementById('btn');
+    var counter = document.getElementById('counter');
+    var num = 0;
+    setInterval(function(){
+    	path1.classList.add('paused');
+    	setTimeout(function(){
+    			path1.classList.remove('paused');
+    		},1000);
+    },3000);
+    setInterval(function(){
+    	path2.classList.add('paused');
+    	setTimeout(function(){
+    			path2.classList.remove('paused');
+    		},600);
+    },3400);
+    setInterval(function(){
+    	path3.classList.add('paused');
+    	setTimeout(function(){
+    			path3.classList.remove('paused');
+    		},200);
+    },3800);
+    //- setInterval(function() {
+    //- 	path1.classList.add('paused');
+    //- }, 3000);
+    //- setInterval(function() {
+    //- 	path2.classList.add('paused');
+    //- }, 3400);
+    //- setInterval(function() {
+    //- 	path3.classList.add('paused');
+    //- }, 3800);
+    //- setInterval(function() {
+    //- 	if(path3.classList.contains('paused')) {
+    //- 		path1.classList.remove('paused');
+    //- 		path2.classList.remove('paused');
+    //- 		path3.classList.remove('paused');
+    //- 	}
+    //- }, 3800);
+    btn.addEventListener('click', function() {
+    	setInterval(function() {
+    		if(counter.innerHTML < 100) {
+    			counter.innerHTML = num++;
+    		}
+    	}, 20);
+    });
+  </script>
+</html>

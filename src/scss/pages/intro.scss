@@ -6,6 +6,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    .intro__background-img {
+        display: none;
+
+        @include tablets {
+            display: block;
+            height: 100%;
+            transform: translateX(-50%);
+        }
+    }
 }
 
 .intro__top {
@@ -24,7 +34,7 @@
     padding: 10px 28px;
     border: 1px solid #fff;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 30px;
     transition: .4s;
     position: relative;
     overflow: hidden;
@@ -38,7 +48,7 @@
     .btn__hover {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 49%;
         transform: translate(-50%, -50%);
         background-color: #4e8839;
         width: 0;

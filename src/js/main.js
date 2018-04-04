@@ -10,10 +10,12 @@ const WebGLBlock = document.querySelector('.intro__background'),
 			menuBurger = document.querySelector('.header__burger-menu');
 
 var isMobile = false;
+var width = document.body.clientWidth;
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
 	isMobile = true;
 
+const preloader = require('./preloader');
 const slider = require('./slider');
 const parallax = require('./parallax');
 
@@ -69,6 +71,8 @@ window.onscroll = function() {
 window.onresize = function () {
 	if(blurWrap)
 		blur.set();
+
+	width = document.body.clientWidth;
 };
 
 if(blurWrap)
@@ -83,7 +87,7 @@ if(menuBurger)
 slider.init();
 
 $('.blog-nav').on('click', function(e) {
-	if (isMobile)
+	if (width <= 768)
 		$(this).toggleClass('blog-nav--active');
 });
 
@@ -101,4 +105,35 @@ document.body.addEventListener('keydown', function(e) {
 	if(document.querySelector('.burger-menu--active'))
 		if(e.key == 'ArrowUp' || e.key == 'ArrowDown')
 			e.preventDefault();
+});
+
+var mail = document.getElementById('mail'),
+	inputs = document.querySelectorAll('.form__input');
+
+mail.addEventListener('submit', function(e) {
+	e.preventDefault();
+
+	var submit = true;
+	for(var i = 0; i < inputs.length; i++) {
+		input = inputs[i];
+		if(input.value == '') {
+			submit =
+			input.classList.add('empty');
+		}
+	}
+
+	if(submit == true) {
+		console.log('submit!');
+
+		for(var i = 0; i < inputs.length; i++) {
+			input = inputs[i];
+			input.value = '';
+		}
+	}
+});
+
+mail.addEventListener('click', function(e) {
+	if(e.target.classList.contains('empty')) {
+		e.target.classList.remove('empty');
+	}
 });
