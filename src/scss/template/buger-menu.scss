@@ -1,0 +1,36 @@
+.burger-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 101;
+
+    &__item {
+        width: 43px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        transition: .7s;
+        transform-origin: left;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &--active {
+        .burger-menu__item {
+            &:first-child {
+                transform: rotate(-315deg);
+            }
+            &:nth-child(2) {
+                transform: translateX(150px);
+                // background-color: transparent;
+            }
+            &:last-child {
+                transform: rotate(315deg);
+            }
+        }
+    }
+}

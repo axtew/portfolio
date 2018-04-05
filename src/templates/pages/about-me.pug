@@ -4,11 +4,15 @@ block variables
     - var title = 'Обо мне'
 
 block content
+
     include ../common/header
+        .header__bg-text
+            svg.header__bg-text-img(width="400" height="120")
+                use(xlink:href="./assets/img/sprite.svg#portfolio_header")
 
     section.section.about-me
 
-        //- .triactangle.about__triactangle
+        .triactangle.about__triactangle
             svg.triactangle__svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 140" preserveaspectratio="none")
                 polygon.triactangle-left.about__triactangle-left(points="0,0   0,151   500.8,151   500.8,100")
                 polygon.triactangle-right.about__triactangle-right(points="1000,0   1000,151   500,151   500,100")

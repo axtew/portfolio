@@ -1,9 +1,9 @@
 // console.log('in parallax.js!');
 
-var parallax = ( function () {
+module.exports = ( function () {
     var bg = document.querySelector('.header__bg');
-    var user = document.querySelector('.header__profile');
-    var sectionText = document.querySelector('.header__bg-text');
+    var user = document.querySelector('.header__user');
+    var sectionText = document.querySelector('.header__bg-text-img');
 
     return {
         move: function (block, windowScroll, strafeAmount) {
@@ -16,11 +16,9 @@ var parallax = ( function () {
             style.webkitTransform = transformString;
         },
         init: function (wScroll) {
-            // this.move(bg, wScroll, 45);
-            this.move(sectionText, wScroll, 20);
+            this.move(bg, wScroll, 35);
+            this.move(sectionText, wScroll, 12);
             this.move(user, wScroll, 3);
         }
     }
 }());
-
-export default parallax;

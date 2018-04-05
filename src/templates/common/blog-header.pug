@@ -1,0 +1,23 @@
+header.header
+
+        .header__socials.socials
+            include ../common/socials
+
+        .header__burger-menu.burger-menu
+            ul.burger-menu__list
+                li.burger-menu__item
+                li.burger-menu__item
+                li.burger-menu__item
+
+        .profile.blog__profile
+            .header__user
+                .photo.blog__photo
+                    img.blog__photo-img(src="./assets/img/photo.jpg", alt="photo")
+
+                .blog__text
+                    .title.blog__title Блог
+                    .blog__subtitle Статьи, которые я скопировал)
+                    
+        figure.header__arrow
+            svg.header__arrow-img(width="25" height="20")
+                use(xlink:href="./assets/img/sprite.svg#arrow_down")

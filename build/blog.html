@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="assets/css/main.min.css">
   </head>
   <body>
+    <div class="preloader" id="page-preloader">
+      <div class="loader"><span id="load-perc">0</span>
+        <svg class="preload-svg" id="svg" width="80" height="95">
+          <g>
+            <path class="path" id="path1" fill="none" stroke="#231F20" stroke-width="3.9003" stroke-miterlimit="10" d="M0,38.005c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,38.005,80,38.005"></path>
+          </g>
+          <g>
+            <path class="path" id="path2" fill="none" stroke="#231F20" stroke-width="3.9003" stroke-miterlimit="10" d="M0,61.684c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,61.684,80,61.684"></path>
+          </g>
+          <g>
+            <path class="path" id="path3" fill="none" stroke="#231F20" stroke-width="3.9003" stroke-miterlimit="10" d="M0,85.362c6.663,0,6.663,7.801,13.327,7.801c6.665,0,6.665-7.801,13.33-7.801c6.667,0,6.667,7.801,13.334,7.801c6.666,0,6.666-7.801,13.331-7.801c6.67,0,6.67,7.801,13.339,7.801S73.33,85.362,80,85.362"></path>
+          </g>
+        </svg>
+      </div>
+    </div>
     <div class="wrapper">
       <header class="header">
         <div class="header__socials socials">
@@ -35,35 +50,54 @@
             <li class="burger-menu__item"></li>
           </ul>
         </div>
-        <div class="profile blog__profile">
-          <div class="photo blog__photo"><img class="blog__photo-img" src="./assets/img/photo.jpg" alt="photo"></div>
-          <div class="blog__text">
-            <div class="title blog__title">Блог
-              <div class="title-bg blog__title-bg">
-                <svg class="title-bg__img" width="300" height="100">
-                  <use xlink:href="./assets/img/sprite.svg#blog_header"></use>
-                </svg>
-              </div>
+        <nav class="nav-menu">
+          <div class="nav-menu__bg">
+            <div class="nav-menu__left-bg"></div>
+            <div class="nav-menu__right-bg"></div>
+          </div>
+          <ul class="nav-menu__list">
+            <li class="nav-menu__item title"><a class="nav-menu__link" href="./works.html">Мои работы</a></li>
+            <li class="nav-menu__item title"><a class="nav-menu__link" href="./about-me.html">Обо мне</a></li>
+            <li class="nav-menu__item title"><a class="nav-menu__link" href="./blog.html">Блог</a></li>
+            <li class="nav-menu__item title"><a class="nav-menu__link" href="./index.html">Авторизация</a></li>
+          </ul>
+        </nav>
+        <div class="header__bg"><img class="header__bg-img" src="assets/img/bg.jpg"></div>
+        <div class="profile header__profile">
+          <div class="header__user">
+            <div class="photo header__photo"><img class="header__photo-img" src="./assets/img/photo.jpg" alt="photo"></div>
+            <div class="blog__text">
+              <div class="title blog__title">Блог</div>
+              <div class="blog__subtitle">Статьи, которые я скопировал)</div>
             </div>
-            <div class="blog__subtitle">Статьи, которые я скопировал)</div>
           </div>
         </div>
+        <div class="header__bg-text">
+          <svg class="header__bg-text-img" width="300" height="100">
+            <use xlink:href="./assets/img/sprite.svg#blog_header"></use>
+          </svg>
+        </div>
+        <figure class="header__arrow">
+          <svg class="header__arrow-img" width="25" height="20">
+            <use xlink:href="./assets/img/sprite.svg#arrow_down"></use>
+          </svg>
+        </figure>
       </header>
       <section class="blog">
         <div class="triactangle works__triactangle">
           <svg class="triactangle__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 140" preserveaspectratio="none">
-            <polygon class="triactangle-left works__triactangle-left" points="0,0   0,151   500.8,151   500.8,100"></polygon>
-            <polygon class="triactangle-right works__triactangle-right" points="1000,0   1000,151   500,151   500,100"></polygon>
+            <polygon class="triactangle-left blog__triactangle-left" points="0,0   0,151   500.8,151   500.8,100"></polygon>
+            <polygon class="triactangle-right blog__triactangle-right" points="1000,0   1000,151   500,151   500,100"></polygon>
           </svg>
         </div>
-        <div class="container">
+        <div class="container blog__container">
           <aside class="blog__nav blog-nav">
             <ul class="blog-nav__list">
-              <li class="blog-nav__item blog-nav__item--active"><span>Самое важное в SASS</span></li>
               <li class="blog-nav__item"><span>Самое важное в SASS</span></li>
               <li class="blog-nav__item"><span>Приёмы в вёрстке, без которых не обходится ни один сайт</span></li>
               <li class="blog-nav__item"><span>Самый необходимый набор Gulp плагинов</span></li>
               <li class="blog-nav__item"><span>Почему я выбрал Pug</span></li>
+              <li class="blog-nav__item"><span>Статья блога</span></li>
             </ul>
           </aside>
           <div class="blog__cont">
@@ -122,6 +156,50 @@
                   кадров влечет за собой процесс внедрения и модернизации
                   системы обучения кадров, соответствует насущным потребностям.
                   
+                </p>
+              </div>
+            </article>
+            <article class="article blog__article">
+              <h3>Самый необходимый набор Gulp плагинов</h3><span>23 ноября 2016</span>
+              <div class="article__text">
+                <p>
+                  Таким образом начало повседневной работы по формированию
+                  позиции позволяет выполнять важные задания по разработке
+                  направлений прогрессивного развития. Разнообразный и богатый
+                  опыт новая модель организационной деятельности играет важную
+                  роль в формировании новых предложений. Товарищи! новая модель
+                  организационной деятельности играет важную роль в формировании
+                  систем массового участия.
+                  
+                </p>
+              </div>
+            </article>
+            <article class="article blog__article">
+              <h3>Почему я выбрал Pug</h3><span>24 ноября 2016</span>
+              <div class="article__text">
+                <p>
+                  Таким образом начало повседневной работы по формированию
+                  позиции позволяет выполнять важные задания по разработке
+                  направлений прогрессивного развития. Разнообразный и богатый
+                  опыт новая модель организационной деятельности играет важную
+                  роль в формировании новых предложений. Товарищи! новая модель
+                  организационной деятельности играет важную роль в формировании
+                  систем массового участия.
+                  
+                </p>
+              </div>
+            </article>
+            <article class="article blog__article">
+              <h3>Статья блога</h3><span>25 ноября 2016</span>
+              <div class="article__text">
+                <p>
+                  Таким образом начало повседневной работы по формированию
+                  позиции позволяет выполнять важные задания по разработке
+                  направлений прогрессивного развития. Разнообразный и богатый
+                  опыт новая модель организационной деятельности играет важную
+                  роль в формировании новых предложений. Товарищи! новая модель
+                  организационной деятельности играет важную роль в формировании
+                  систем массового участия.
                 </p>
               </div>
             </article>

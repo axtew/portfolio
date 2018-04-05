@@ -6,8 +6,10 @@ block variables
 block content
     section.intro
 
-        //- .Background
-        //- .test(v-html="href")
+        .intro__background
+            img.intro__background-img(src="./assets/img/bg.jpg", alt="water")
+            canvas.intro__background-canvas
+        
 
         .intro__top
             .btn.intro__btn.btn__click
@@ -40,7 +42,7 @@ block content
 
                 .intro__card-back
                     .subtitle.intro__title Авторизируйтесь
-                    form.intro__form.intro-form
+                    form#identification.intro__form.intro-form
                         .form__cont.intro-form__cont
                             .intro-form__field
                                 .intro-form__img
