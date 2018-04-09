@@ -1,5 +1,3 @@
-// console.log('in skills.js!');
-
 module.exports = ( function () {
 	var svg = document.querySelector('.scills-circle'),
 			svgAll = document.querySelectorAll('.scills-circle'),

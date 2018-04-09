@@ -1,0 +1,19 @@
+script(type="text/x-template" id="list-template")
+  .scills-list
+    .skills-title {{skillType}}
+    table
+      item(
+        v-for="skill in skills"
+        v-if="convertSkillStringToNum(skillType) === skill.type"
+        :key="skill.id"
+        :skill="skill"
+      )
+    inp(
+      :type="convertSkillStringToNum(skillType)"
+      @buttonWasClicked="handleEmit"
+    )
+    br
+    hr
+
+include ../components/skillsItem
+include ../components/skillInput

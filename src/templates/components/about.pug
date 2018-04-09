@@ -1,0 +1,11 @@
+script(type="text/x-template" id="about-template")
+  .section.about-section
+    h1 Страница "Обо мне"
+    list(
+      v-for="skillType in skillsTypes"
+      :key="skillType"
+      :skillType="skillType"
+      :skills="skills"
+    )
+
+include ../components/skillsList

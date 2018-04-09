@@ -1,0 +1,24 @@
+.list {
+  display: flex;
+  background: #f0efe9;
+}
+
+.item {
+  border-right: 2px solid #fff;
+}
+
+.link {
+  width: 180px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #566358;
+}
+
+.router-link-exact-active,
+.active {
+  background-color: #fff;
+  color: #6c9c5a;
+}

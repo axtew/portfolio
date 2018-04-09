@@ -6,10 +6,9 @@ footer.footer
         .footer__mid
             .container
                 .footer__pages
-                    a.footer__links(href="./works.html") Мои работы
-                    a.footer__links(href="./about-me.html") Обо мне
-                    a.footer__links(href="./blog.html") Блог
-                    a.footer__links(href="./index.html") Авторизация
+                    each btns in links
+                        a.footer__links(href=`${btns[1]}`) #{btns[0]}
+                    a.footer__links(href="/") Авторизация
                 .footer__socials
                     include ../common/socials
         .footer__right

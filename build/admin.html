@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Админ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,700i&amp;amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <script src="assets/scripts/bundle.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="admin">
+        <adminheader></adminheader>
+      </div>
+      <div class="tabs">
+        <tabs></tabs>
+      </div>
+      <div class="content">
+        <about></about>
+      </div>
+    </div>
+    <script type="text/x-template" id="header-template">
+      <header class="pageHeader">
+        <div class="admin-panel">Панель администрирования</div><a class="return-back" href="">Вернуться на сайт</a>
+      </header>
+    </script>
+    <script type="text/x-template" id="tabs-template">
+      <div class="tabs">
+        <ul class="list">
+          <li class="item" v-for="tab in tabs"><a class="link" href="tab.href">{{ tab.name }}</a></li>
+        </ul>
+      </div>
+    </script>
+    <script type="text/x-template" id="about-template">
+      <div class="section about-section">
+        <h1>Страница "Обо мне"</h1>
+        <list v-for="skillType in skillsTypes" :key="skillType" :skillType="skillType" :skills="skills"></list>
+      </div>
+    </script>
+    <script type="text/x-template" id="list-template">
+      <div class="scills-list">
+        <div class="skills-title">{{skillType}}</div>
+        <table>
+          <item v-for="skill in skills" v-if="convertSkillStringToNum(skillType) === skill.type" :key="skill.id" :skill="skill"></item>
+        </table>
+        <inp :type="convertSkillStringToNum(skillType)" @buttonWasClicked="handleEmit"></inp><br>
+        <hr>
+      </div>
+    </script>
+    <script type="text/x-template" id="items-template">
+      <tr>
+        <td>{{skill.name}}</td>
+        <td>
+          <input type="text" :value="skill.percents">
+        </td>
+        <td></td>
+      </tr>
+    </script>
+    <script type="text/x-template" id="input-template">
+      <div class="skill-input">
+        <input type="text" v-model="skillName">
+        <button type="button" @click="emitClick">Сохранить</button>
+      </div>
+    </script>
+  </body>
+</html>

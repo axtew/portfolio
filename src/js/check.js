@@ -62,8 +62,6 @@ module.exports = function(formId) {
 				radio.checked = false;
 			}
         }
-        
-        console.log('submit!');
 	});
 
 	form.addEventListener('click', function(e) {

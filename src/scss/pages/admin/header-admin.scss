@@ -1,0 +1,20 @@
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #6c9c5a;
+  align-items:  center;
+  color: #fff;
+  height: 80px;
+
+  a {
+    color: inherit;
+    opacity: .7;
+    text-decoration: underline;
+  }
+}
+
+.admin-panel {
+  font-size: 28px;
+  line-height: 34px;
+}

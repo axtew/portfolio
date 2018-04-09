@@ -1,0 +1,7 @@
+script(type="text/x-template" id="items-template")
+  tr
+    td {{skill.name}}
+    td
+      input(type="text" :value="skill.percents")
+    td
+      //- button(type="button" @click="removeExistedSkill(skill.id)") Удалить

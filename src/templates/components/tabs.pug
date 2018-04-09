@@ -1,0 +1,11 @@
+script(type="text/x-template" id="tabs-template")
+  .tabs
+    ul.list
+      li.item(v-for="tab in tabs")
+        a.link(
+          href="tab.href"
+        ) {{ tab.name }}
+        //- router-link.link(
+        //-   :to="tab.href"
+        //- ) {{ tab.name }}
+    

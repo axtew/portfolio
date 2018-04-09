@@ -1,6 +1,4 @@
-// console.log('in blur.js!');
-
-module.exports = ( function () {
+module.exports = ( function() {
     var wrapper = document.querySelector('.blur__wrap'),
         form = document.querySelector('.blur__form');
 

@@ -13,14 +13,11 @@ header.header
             .nav-menu__left-bg
             .nav-menu__right-bg
         ul.nav-menu__list
+            each btns in links
+                li.nav-menu__item.title
+                    a.nav-menu__link(href=`${btns[1]}`) #{btns[0]}
             li.nav-menu__item.title
-                a.nav-menu__link(href="./works.html") Мои работы
-            li.nav-menu__item.title
-                a.nav-menu__link(href="./about-me.html") Обо мне
-            li.nav-menu__item.title
-                a.nav-menu__link(href="./blog.html") Блог
-            li.nav-menu__item.title
-                a.nav-menu__link(href="./index.html") Авторизация
+                a.nav-menu__link(href="/") Авторизация
 
     .header__bg
         img.header__bg-img(src="assets/img/bg.jpg")
