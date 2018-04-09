@@ -1,5 +1,7 @@
 "use strict";
 
+// const $gp = require("gulp-load-plugins")();
+
 const gulp = require('gulp'),
       pug = require('gulp-pug'),
       sourcemaps = require('gulp-sourcemaps'),
@@ -10,8 +12,10 @@ const gulp = require('gulp'),
       plumber = require('gulp-plumber'),
       moduleImporter = require('sass-module-importer'),
       browserSync = require('browser-sync').create(),
+      reload = browserSync.reload,
       gulpWebpack = require('gulp-webpack'),
       webpack = require('webpack'),
+      mergeStream = require("merge-stream"),
       sassGlob = require('gulp-sass-glob'),
       webpackConfig = require('./webpack.config.js'),
       cheerio = require('gulp-cheerio'),
@@ -52,13 +56,59 @@ const paths = {
 const config = {
   mode: {
     symbol: {
-      sprite: "../sprite.svg",
-      example: {
-        dest: '../demo/spriteSvgDemo.html' // демо html
-      }
+      sprite: "../sprite.svg"
     }
   }
 };
+
+// компиляция pug
+function templates() {
+  return gulp.src(paths.templates.pages)
+    .pipe(pug({pretty: true}))
+    .pipe(gulp.dest(paths.root));
+}
+
+// компиляция scss
+function styles() {
+  return gulp.src('./src/scss/main.scss')
+    .pipe(sassGlob())
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(
+      sass({
+        outputStyle: 'compressed',
+        importer: moduleImporter()
+      })
+    )
+    .pipe(
+      autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      })
+    )
+    .pipe(sourcemaps.write())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(paths.styles.dest))
+}
+
+// обработка js
+function scripts() {
+  return gulp.src('./src/js/main.js')
+    .pipe(gulpWebpack(webpackConfig, webpack))
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(reload({ stream: true }));
+}
+
+// очистка
+function clean() {
+  return del(paths.root);
+}
+
+// перенос картинок
+function images() {
+  return gulp.src(paths.images.src)
+    .pipe(gulp.dest(paths.images.dest));
+}
 
 // слежка
 function watch() {
@@ -73,15 +123,10 @@ function watch() {
 // сервер
 function server() {
   browserSync.init({
-    server: paths.root
+    server: paths.root,
+    open: false
   });
   browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
-}
-
-// перенос картинок
-function images() {
-  return gulp.src(paths.images.src)
-    .pipe(gulp.dest(paths.images.dest));
 }
 
 // svg спрайт
@@ -117,47 +162,6 @@ function fonts() {
     .pipe(gulp.dest(paths.fonts.dest));
 }
 
-// компиляция pug
-function templates() {
-  return gulp.src(paths.templates.pages)
-    .pipe(pug({pretty: true}))
-    .pipe(gulp.dest(paths.root));
-}
-
-// компиляция scss
-function styles() {
-  return gulp.src('./src/scss/main.scss')
-    .pipe(sassGlob())
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(
-      sass({
-        outputStyle: 'compressed',
-        importer: moduleImporter()
-      })
-    )
-    .pipe(
-      autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-      })
-    )
-    .pipe(sourcemaps.write())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(paths.styles.dest))
-}
-
-function scripts() {
-  return gulp.src('./src/js/main.js')
-    .pipe(gulpWebpack(webpackConfig, webpack))
-    .pipe(gulp.dest(paths.scripts.dest));
-}
-
-// очистка
-function clean() {
-  return del(paths.root);
-}
-
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
@@ -165,6 +169,11 @@ exports.images = images;
 exports.fonts = fonts;
 exports.scripts = scripts;
 exports.sprite = sprite;
+
+gulp.task('build', gulp.series(
+  sprite,
+  gulp.parallel(styles, images, fonts, scripts)
+));
 
 gulp.task('default', gulp.series(
   clean,

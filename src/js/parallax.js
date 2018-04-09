@@ -1,5 +1,3 @@
-// console.log('in parallax.js!');
-
 module.exports = ( function () {
     var bg = document.querySelector('.header__bg');
     var user = document.querySelector('.header__user');

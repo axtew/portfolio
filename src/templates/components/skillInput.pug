@@ -1,0 +1,11 @@
+script(type="text/x-template" id="input-template")
+  .skill-input
+    input(
+      type="text"
+      v-model="skillName"
+    )
+    button(type="button" @click="emitClick") Сохранить
+      //- :class="{error: validation.hasError('skillName')}"
+      //- @keydown.enter="emitClick"
+
+    //- .error-message {{validation.firstError('skillName')}}

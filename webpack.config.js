@@ -1,18 +1,24 @@
 const webpack = require('webpack'),
-      uglifyJS = require('uglifyjs-webpack-plugin');
+      uglifyJS = require('uglifyjs-webpack-plugin'),
+      path = require("path");
 
 const config = {
 	output: {
-			filename: 'bandle.js'
+		filename: 'bundle.js'
 	},
+	resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
 	plugins: [
-			new uglifyJS ({
-					sourceMap: true
-			}),
-			new webpack.ProvidePlugin ({
-					$: 'jquery',
-					jQuery: 'jquery'
-			})
+		new uglifyJS ({
+			sourceMap: true
+		}),
+		new webpack.ProvidePlugin ({
+			$: 'jquery',
+			jQuery: 'jquery'
+    })
 	]
 };
 
